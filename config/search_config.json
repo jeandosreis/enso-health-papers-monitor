@@ -1,0 +1,218 @@
+{
+  "project": {
+    "title": "ENSO & Health Research Monitor",
+    "subtitle": "High-precision scientific literature on El Niño, La Niña, ENSO and human health",
+    "language": "en"
+  },
+  "inclusion": {
+    "strategy": "title_first_with_false_positive_exclusions",
+    "criterion": "The publication title must contain at least one ENSO term and at least one predefined human-health term. Clear false positives are then excluded (non-human/ecological outcomes, Spanish 'el niño' meaning child, meteorological outbreaks, corrections/errata, lexical false positives, and food-security/famine/nutrition-only titles without a direct health outcome).",
+    "use_abstract_for_inclusion": false
+  },
+  "enso_terms": [
+    "El Niño",
+    "El Nino",
+    "La Niña",
+    "La Nina",
+    "ENSO",
+    "El Niño-Southern Oscillation",
+    "El Nino-Southern Oscillation",
+    "El Niño Southern Oscillation",
+    "El Nino Southern Oscillation"
+  ],
+  "health_categories": {
+    "Vector-borne diseases": [
+      "dengue",
+      "malaria",
+      "zika",
+      "chikungunya",
+      "yellow fever",
+      "leishmaniasis",
+      "leptospirosis",
+      "hantavirus",
+      "hantavirus pulmonary syndrome",
+      "rift valley fever",
+      "west nile virus",
+      "ross river virus",
+      "japanese encephalitis",
+      "vector-borne disease",
+      "vector-borne diseases",
+      "mosquito-borne disease",
+      "mosquito-borne diseases",
+      "arboviral disease",
+      "arboviral diseases"
+    ],
+    "Waterborne & enteric diseases": [
+      "cholera",
+      "diarrhea",
+      "diarrhoea",
+      "diarrheal disease",
+      "diarrheal diseases",
+      "diarrhoeal disease",
+      "diarrhoeal diseases",
+      "gastroenteritis",
+      "waterborne disease",
+      "waterborne diseases",
+      "enteric disease",
+      "enteric diseases",
+      "enteric infection",
+      "enteric infections",
+      "cryptosporidiosis"
+    ],
+    "Respiratory health": [
+      "respiratory disease",
+      "respiratory diseases",
+      "respiratory infection",
+      "respiratory infections",
+      "respiratory mortality",
+      "asthma",
+      "pneumonia",
+      "influenza",
+      "lung disease",
+      "lung diseases"
+    ],
+    "Cardiovascular health": [
+      "cardiovascular disease",
+      "cardiovascular diseases",
+      "cardiovascular mortality",
+      "heart disease",
+      "heart diseases",
+      "coronary heart disease",
+      "stroke",
+      "ischemic heart disease",
+      "ischaemic heart disease"
+    ],
+    "Mortality, morbidity & healthcare": [
+      "mortality",
+      "morbidity",
+      "death",
+      "deaths",
+      "excess mortality",
+      "all-cause mortality",
+      "hospitalization",
+      "hospitalizations",
+      "hospitalisation",
+      "hospitalisations",
+      "hospital admission",
+      "hospital admissions",
+      "emergency department visit",
+      "emergency department visits",
+      "injury",
+      "injuries"
+    ],
+    "Maternal, child & reproductive health": [
+      "maternal health",
+      "maternal mortality",
+      "pregnancy",
+      "pregnant women",
+      "pregnancy outcome",
+      "pregnancy outcomes",
+      "birth outcome",
+      "birth outcomes",
+      "birth weight",
+      "low birth weight",
+      "preterm birth",
+      "preterm births",
+      "stillbirth",
+      "stillbirths",
+      "child health",
+      "infant mortality",
+      "neonatal mortality",
+      "neonatal health",
+      "reproductive health"
+    ],
+    "Nutrition & food security": [
+      "nutrition",
+      "nutritional status",
+      "malnutrition",
+      "undernutrition",
+      "stunting",
+      "wasting",
+      "food security",
+      "food insecurity",
+      "famine"
+    ],
+    "Mental health": [
+      "mental health",
+      "depression",
+      "anxiety",
+      "suicide",
+      "suicides",
+      "psychiatric disorder",
+      "psychiatric disorders",
+      "psychological distress",
+      "post-traumatic stress disorder",
+      "posttraumatic stress disorder",
+      "ptsd"
+    ],
+    "Heat-related health": [
+      "heat-related illness",
+      "heat-related illnesses",
+      "heat illness",
+      "heat illnesses",
+      "heatstroke",
+      "heat stroke",
+      "heat-related mortality",
+      "heat mortality",
+      "heat-related morbidity",
+      "thermal discomfort"
+    ],
+    "Infectious diseases": [
+      "infectious disease",
+      "infectious diseases",
+      "communicable disease",
+      "communicable diseases",
+      "infection incidence",
+      "infection risk",
+      "disease incidence",
+      "disease prevalence",
+      "disease transmission",
+      "epidemic",
+      "epidemics",
+      "outbreak",
+      "outbreaks"
+    ],
+    "Other chronic diseases": [
+      "kidney disease",
+      "kidney diseases",
+      "chronic kidney disease",
+      "renal disease",
+      "renal diseases",
+      "diabetes",
+      "diabetes mellitus"
+    ],
+    "General human health": [
+      "human health",
+      "public health",
+      "health",
+      "health outcome",
+      "health outcomes",
+      "health impact",
+      "health impacts",
+      "health risk",
+      "health risks",
+      "disease burden"
+    ]
+  },
+  "openalex": {
+    "types": [
+      "article",
+      "review",
+      "preprint"
+    ],
+    "per_page": 100,
+    "max_records_total": 50000,
+    "search_scope": "title",
+    "query_strategy": "combined_health_terms"
+  },
+  "pubmed": {
+    "batch_size": 200,
+    "max_records_total": 10000,
+    "query_strategy": "combined_health_terms",
+    "search_scope": "title"
+  },
+  "crossref": {
+    "enabled": true,
+    "max_enrichments_per_run": 500
+  }
+}

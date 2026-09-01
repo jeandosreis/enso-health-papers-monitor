@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Continuously updated scientific literature on El Niño, La Niña, ENSO and human health." />
+  <meta name="theme-color" content="#7b0a06" />
+  <title>ENSO & Saúde | Monitor de Literatura Científica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <style id="year-chart-enhancements">
+    /* Publications-by-year chart enhancements kept in index.html only */
+    #yearChart.year-chart {
+      position: relative;
+      height: 190px;
+      padding: 34px 8px 32px 38px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      border-bottom: 0;
+      background:
+        linear-gradient(to top, var(--line) 1px, transparent 1px) 0 calc(100% - 31px) / 100% 25% repeat-y;
+    }
+
+    #yearChart .year-bar-wrap {
+      min-width: 7px;
+      flex: 1 0 7px;
+      height: calc(100% - 1px);
+      position: relative;
+      z-index: 1;
+    }
+
+    #yearChart .year-bar {
+      transition: height .25s ease, opacity .15s ease, transform .15s ease;
+      transform-origin: bottom;
+    }
+
+    #yearChart .year-bar-wrap:hover .year-bar {
+      transform: scaleX(1.12);
+    }
+
+    /* Put the tooltip inside the plot so it cannot be clipped. */
+    #yearChart .year-bar-wrap::after {
+      bottom: auto;
+      top: -28px;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 8px;
+      border-radius: 7px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.16);
+      pointer-events: none;
+    }
+
+    /* X-axis labels are added selectively by the inline helper below. */
+    #yearChart .year-bar-wrap::before {
+      content: '';
+    }
+
+    #yearChart .year-bar-wrap[data-show-year="true"]::before {
+      content: attr(data-year);
+      position: absolute;
+      left: 50%;
+      bottom: -24px;
+      transform: translateX(-50%);
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    #yearChart .year-bar-wrap[data-show-year="true"]::after {
+      z-index: 8;
+    }
+
+    #yearChart .chart-y-label {
+      position: absolute;
+      left: 2px;
+      z-index: 3;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    #yearChart .chart-y-label.max { top: 31px; }
+    #yearChart .chart-y-label.mid { top: 50%; transform: translateY(-50%); }
+    #yearChart .chart-y-label.zero { bottom: 28px; }
+
+    #yearChart .chart-axis-title {
+      position: absolute;
+      left: 2px;
+      top: 7px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      pointer-events: none;
+    }
+
+    .year-chart-caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: 10px;
+      text-align: center;
+    }
+
+    @media (max-width: 700px) {
+      #yearChart.year-chart {
+        height: 175px;
+        padding-left: 34px;
+      }
+      #yearChart .year-bar-wrap {
+        min-width: 9px;
+        flex-basis: 9px;
+      }
+    }
+
+    /* Header identity and bilingual controls */
+    .brand-logo {
+      display: block;
+      width: 176px;
+      max-height: 46px;
+      object-fit: contain;
+      object-position: left center;
+    }
+
+    [data-theme="dark"] .brand-logo {
+      filter: brightness(0) invert(1);
+      opacity: .94;
+    }
+
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--surface);
+    }
+
+    .language-switch button {
+      min-width: 36px;
+      height: 32px;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+
+    .language-switch button:hover { color: var(--text); }
+    .language-switch button.active {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .hero-credit {
+      display: grid;
+      gap: 2px;
+      margin: -15px 0 28px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-credit p { margin: 0; }
+    .hero-credit a {
+      color: var(--text);
+      font-weight: 800;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .hero-credit a:hover { color: var(--accent); }
+
+    @media (max-width: 700px) {
+      .brand-logo { width: 142px; }
+      .header-inner { gap: 10px; }
+      .language-switch button { min-width: 32px; }
+      .hero-credit { font-size: 12px; }
+    }
+  </style>
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#top" aria-label="CIDACS">
+        <img
+          class="brand-logo"
+          src="https://cidacs.bahia.fiocruz.br/wp-content/themes/cidacs_new/img/logo-header.svg"
+          alt="CIDACS"
+        />
+      </a>
+      <nav class="nav" aria-label="Navegação principal" data-i18n-aria="navAria">
+        <a href="#publications" data-i18n="navPublications">Publicações</a>
+        <a href="#trends" data-i18n="navTrends">Tendências</a>
+        <a href="#methodology" data-i18n="navMethodology">Metodologia</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="Idioma" data-i18n-aria="languageAria">
+        <button type="button" data-language="pt" aria-pressed="true">PT</button>
+        <button type="button" data-language="en" aria-pressed="false">EN</button>
+      </div>
+      <button id="themeToggle" class="icon-button" type="button" aria-label="Alternar modo escuro" title="Alternar tema" data-i18n-aria="themeAria" data-i18n-title="themeTitle">◐</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" data-i18n="heroEyebrow">BASE BIBLIOGRÁFICA VIVA</p>
+          <h1 data-i18n-html="heroTitle">Literatura científica sobre <span>ENSO</span> e saúde humana</h1>
+          <p class="hero-text" data-i18n="heroText">
+            Um catálogo continuamente atualizado e de alta precisão de publicações científicas cujos títulos
+            conectam explicitamente El Niño, La Niña ou ENSO à saúde humana e a desfechos de saúde.
+          </p>
+          <div class="hero-credit">
+            <p><span data-i18n="initiativePrefix">Uma iniciativa da plataforma</span> <a href="https://cidacs.bahia.fiocruz.br/cidacs-clima/" target="_blank" rel="noopener noreferrer">CIDACS Clima</a>.</p>
+            <p><span data-i18n="developedBy">Elaborado por</span> <a href="https://jeandosreis.github.io/" target="_blank" rel="noopener noreferrer">Jean dos Reis</a>.</p>
+          </div>
+          <div class="hero-actions">
+            <a class="button primary" href="#publications" data-i18n="explorePublications">Explorar publicações</a>
+            <a class="button secondary" href="#methodology" data-i18n="howItWorks">Como funciona</a>
+          </div>
+        </div>
+        <aside class="hero-note" aria-label="Fontes de dados" data-i18n-aria="dataSourcesAria">
+          <div class="pulse-dot"></div>
+          <div>
+            <strong data-i18n="automaticallyUpdated">Atualização automática</strong>
+            <p data-i18n="sourceDescription">Descoberta baseada em títulos via OpenAlex e PubMed, com enriquecimento de metadados DOI pelo Crossref.</p>
+            <p id="updatedAt" class="muted">Base ainda não atualizada.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="stats-section" aria-label="Estatísticas resumidas" data-i18n-aria="summaryStatsAria">
+      <div class="container stats-grid">
+        <article class="stat-card">
+          <span class="stat-label" data-i18n="statPublications">Publicações</span>
+          <strong id="statTotal">—</strong>
+          <small data-i18n="uniqueRecords">registros únicos</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label" data-i18n="statOpenAccess">Acesso aberto</span>
+          <strong id="statOA">—</strong>
+          <small id="statOAPct">disponibilidade identificada</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label" data-i18n="statLatestYear">Ano mais recente</span>
+          <strong id="statLatestYear">—</strong>
+          <small data-i18n="currentDataset">na base atual</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label" data-i18n="statHealthTopics">Temas de saúde</span>
+          <strong id="statTopics">—</strong>
+          <small data-i18n="thematicGroups">grupos temáticos automáticos</small>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow" data-i18n="searchEyebrow">PESQUISE AS EVIDÊNCIAS</p>
+            <h2 data-i18n="scientificPublications">Publicações científicas</h2>
+            <p data-i18n="publicationIntro">Somente publicações com um termo de ENSO e um termo predefinido de saúde no título são incluídas. A busca local considera título, autores, resumo, periódico, DOI e temas.</p>
+          </div>
+          <div class="result-counter"><strong id="resultCount">0</strong><span data-i18n="results">resultados</span></div>
+        </div>
+
+        <div class="explorer-shell">
+          <aside class="filters" aria-label="Filtros de publicações" data-i18n-aria="filtersAria">
+            <div class="filter-header">
+              <h3 data-i18n="filters">Filtros</h3>
+              <button id="clearFilters" class="text-button" type="button" data-i18n="clearAll">Limpar tudo</button>
+            </div>
+
+            <label class="field-label" for="searchInput" data-i18n="search">Buscar</label>
+            <div class="search-wrap">
+              <span aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="ex.: dengue, Brazil, mortality…" data-i18n-placeholder="searchPlaceholder" autocomplete="off" />
+            </div>
+
+            <label class="field-label" for="yearFrom" data-i18n="publicationYear">Ano de publicação</label>
+            <div class="year-grid">
+              <input id="yearFrom" type="number" inputmode="numeric" placeholder="From" />
+              <input id="yearTo" type="number" inputmode="numeric" placeholder="To" />
+            </div>
+
+            <label class="field-label" for="topicFilter" data-i18n="healthTopic">Tema de saúde</label>
+            <select id="topicFilter">
+              <option value="" data-i18n="allTopics">Todos os temas</option>
+            </select>
+
+            <label class="field-label" for="ensoFilter" data-i18n="ensoTerm">Termo ENSO</label>
+            <select id="ensoFilter">
+              <option value="" data-i18n="allEnsoCategories">Todas as categorias ENSO</option>
+            </select>
+
+            <label class="field-label" for="sourceFilter" data-i18n="sourceDatabase">Base de origem</label>
+            <select id="sourceFilter">
+              <option value="" data-i18n="allSources">Todas as fontes</option>
+            </select>
+
+            <label class="check-row">
+              <input id="oaOnly" type="checkbox" />
+              <span data-i18n="openAccessOnly">Somente acesso aberto</span>
+            </label>
+          </aside>
+
+          <div class="results-area">
+            <div class="results-toolbar">
+              <p id="activeFilterText">Exibindo o catálogo completo.</p>
+              <label class="sort-label" for="sortSelect">
+                <span data-i18n="sortBy">Ordenar por</span>
+                <select id="sortSelect">
+                  <option value="newest" data-i18n="newest">Mais recentes</option>
+                  <option value="citations" data-i18n="mostCited">Mais citados</option>
+                  <option value="oldest" data-i18n="oldest">Mais antigos</option>
+                  <option value="title" data-i18n="titleAZ">Título A–Z</option>
+                </select>
+              </label>
+            </div>
+
+            <div id="loadingState" class="state-card">Carregando base bibliográfica…</div>
+            <div id="emptyState" class="state-card hidden">
+              <strong data-i18n="noPublications">Nenhuma publicação encontrada.</strong>
+              <p data-i18n="emptyHelp">Ajuste os filtros ou execute a atualização do GitHub Actions se esta for uma nova instalação.</p>
+            </div>
+            <div id="publicationList" class="publication-list" aria-live="polite"></div>
+            <div id="pagination" class="pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trends" class="section alt-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="landscapeEyebrow">PANORAMA DA PESQUISA</p>
+          <h2 data-i18n="literatureEvolving">Como a literatura está evoluindo</h2>
+          <p data-i18n="trendIntro">Estes resumos são gerados a partir da base bibliográfica atual.</p>
+        </div>
+        <div class="charts-grid">
+          <article class="chart-card wide">
+            <div class="chart-title-row">
+              <div>
+                <h3 data-i18n="publicationsByYear">Publicações por ano</h3>
+                <p data-i18n="annualUnique">Número anual de publicações únicas.</p>
+              </div>
+            </div>
+            <div id="yearChart" class="year-chart" role="img" aria-label="Publicações por ano" data-i18n-aria="yearChartAria"></div>
+            <div class="year-chart-caption" aria-hidden="true" data-i18n="publicationYearCaption">Ano de publicação</div>
+          </article>
+          <article class="chart-card">
+            <h3 data-i18n="leadingTopics">Principais temas de saúde</h3>
+            <p data-i18n="topicOverlap">Os registros podem pertencer a mais de um grupo temático.</p>
+            <div id="topicChart" class="bar-list"></div>
+          </article>
+          <article class="chart-card">
+            <h3 data-i18n="sourceCoverage">Cobertura por fonte</h3>
+            <p data-i18n="sourceCoverageDesc">Bases que contribuem para o catálogo integrado.</p>
+            <div id="sourceChart" class="bar-list"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="methodology" class="section">
+      <div class="container method-grid">
+        <div class="section-heading method-intro">
+          <p class="eyebrow" data-i18n="methodsEyebrow">MÉTODOS TRANSPARENTES</p>
+          <h2 data-i18n="howBuilt">Como este monitor é construído</h2>
+          <p data-i18n="methodIntro">
+            O monitor foi concebido como um catálogo reprodutível de descoberta, e não como uma afirmação de cobertura exaustiva.
+            Nenhuma base bibliográfica isolada contém todas as publicações científicas.
+          </p>
+        </div>
+
+        <div class="method-cards">
+          <article class="method-card">
+            <span>01</span>
+            <div>
+              <h3 data-i18n="discover">Descobrir</h3>
+              <p data-i18n="discoverDesc">OpenAlex e PubMed são consultados apenas por títulos que contenham simultaneamente um termo ENSO e um termo predefinido de saúde humana.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span>02</span>
+            <div>
+              <h3 data-i18n="screen">Triar</h3>
+              <p data-i18n="screenDesc">Uma triagem local rigorosa do título verifica independentemente os dois grupos conceituais antes que um registro possa entrar no catálogo.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span>03</span>
+            <div>
+              <h3 data-i18n="merge">Integrar</h3>
+              <p data-i18n="mergeDesc">Os registros são deduplicados principalmente por DOI e PMID, com um procedimento complementar controlado baseado em título normalizado + ano.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span>04</span>
+            <div>
+              <h3 data-i18n="enrich">Enriquecer e classificar</h3>
+              <p data-i18n="enrichDesc">O Crossref complementa metadados DOI ausentes, enquanto correspondências transparentes no título atribuem temas de saúde e rótulos ENSO.</p>
+            </div>
+          </article>
+          <article class="method-card">
+            <span>05</span>
+            <div>
+              <h3 data-i18n="publish">Publicar</h3>
+              <p data-i18n="publishDesc">Uma GitHub Action agendada reconstrói o catálogo JSON, que é lido diretamente pelo site estático.</p>
+            </div>
+          </article>
+        </div>
+
+        <details class="method-details">
+          <summary data-i18n="scopeLimitations">Escopo e limitações da busca</summary>
+          <div>
+            <p data-i18n="scopeP1">
+              O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter
+              pelo menos um termo configurado para El Niño, La Niña ou ENSO e pelo menos um termo predefinido referente
+              à saúde humana, doença, mortalidade, morbidade, nutrição ou outro desfecho de saúde. A coocorrência apenas
+              no resumo, nas palavras-chave ou no texto completo não é suficiente para inclusão.
+            </p>
+            <p data-i18n="scopeP2">
+              Essa escolha favorece intencionalmente a precisão em detrimento da cobertura máxima. Trabalhos que estudem
+              uma relação ENSO–saúde, mas não expressem ambos os conceitos no título, podem não ser recuperados. O catálogo
+              apoia a descoberta e o monitoramento direcionado de evidências; ele não substitui um protocolo formal de revisão sistemática.
+            </p>
+          </div>
+        </details>
+
+        <div class="source-links">
+          <a href="https://openalex.org/" target="_blank" rel="noopener noreferrer">OpenAlex ↗</a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">PubMed ↗</a>
+          <a href="https://www.crossref.org/" target="_blank" rel="noopener noreferrer">Crossref ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <strong data-i18n="footerTitle">Monitor ENSO & Saúde</strong>
+        <p data-i18n="footerDesc">Monitoramento bibliográfico aberto e reprodutível para pesquisas em clima e saúde.</p>
+      </div>
+      <a href="#top" data-i18n="backToTop">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <template id="publicationTemplate">
+    <article class="publication-card">
+      <div class="publication-topline">
+        <div class="publication-tags"></div>
+        <span class="publication-year"></span>
+      </div>
+      <h3 class="publication-title"></h3>
+      <p class="publication-authors"></p>
+      <p class="publication-journal"></p>
+      <p class="publication-abstract"></p>
+      <button class="abstract-toggle text-button hidden" type="button">Mostrar resumo completo</button>
+      <div class="publication-meta"></div>
+      <div class="publication-actions"></div>
+    </article>
+  </template>
+
+  <script src="assets/app.js" defer></script>
+
+  <script>
+    /*
+      Visual enhancement for the publications-by-year chart.
+      This intentionally lives in index.html so assets/app.js does not need to change.
+    */
+    (() => {
+      const chart = document.getElementById('yearChart');
+      if (!chart) return;
+
+      let decorating = false;
+
+      function decorateYearChart() {
+        if (decorating) return;
+        const bars = [...chart.querySelectorAll('.year-bar-wrap')];
+        if (!bars.length) return;
+        decorating = true;
+
+        // Remove axis annotations from a previous render.
+        chart.querySelectorAll('.chart-y-label, .chart-axis-title').forEach(el => el.remove());
+
+        const parsed = bars.map(wrap => {
+          const raw = wrap.dataset.label || '';
+          const match = raw.match(/^(\d{4}):\s*([\d,.]+)/);
+          const year = match ? Number(match[1]) : null;
+          const count = match ? Number(match[2].replace(/,/g, '')) : 0;
+          return { wrap, year, count };
+        }).filter(item => item.year);
+
+        if (!parsed.length) { decorating = false; return; }
+
+        const minYear = Math.min(...parsed.map(d => d.year));
+        const maxYear = Math.max(...parsed.map(d => d.year));
+        const maxCount = Math.max(...parsed.map(d => d.count), 1);
+
+        parsed.forEach(({ wrap, year, count }) => {
+          wrap.dataset.year = String(year);
+          // Keep labels calm: first, last, and every fifth year.
+          wrap.dataset.showYear = String(year === minYear || year === maxYear || year % 5 === 0);
+          const pt = document.documentElement.lang.toLowerCase().startsWith('pt');
+          const locale = pt ? 'pt-BR' : 'en-US';
+          const noun = pt ? (count === 1 ? 'publicação' : 'publicações') : (count === 1 ? 'publication' : 'publications');
+          wrap.dataset.label = `${year} · ${count.toLocaleString(locale)} ${noun}`;
+          wrap.setAttribute('aria-label', wrap.dataset.label);
+          wrap.setAttribute('title', wrap.dataset.label);
+        });
+
+        const axisTitle = document.createElement('span');
+        axisTitle.className = 'chart-axis-title';
+        axisTitle.textContent = document.documentElement.lang.toLowerCase().startsWith('pt') ? 'Publicações' : 'Publications';
+        chart.appendChild(axisTitle);
+
+        const addY = (cls, value) => {
+          const el = document.createElement('span');
+          el.className = `chart-y-label ${cls}`;
+          el.textContent = Math.round(value).toLocaleString(document.documentElement.lang.toLowerCase().startsWith('pt') ? 'pt-BR' : 'en-US');
+          chart.appendChild(el);
+        };
+        addY('max', maxCount);
+        addY('mid', maxCount / 2);
+        addY('zero', 0);
+
+        decorating = false;
+      }
+
+      const observer = new MutationObserver(() => {
+        window.requestAnimationFrame(decorateYearChart);
+      });
+      observer.observe(chart, { childList: true });
+
+      // Fallback for very fast local loads / cached data.
+      window.addEventListener('load', decorateYearChart);
+      window.addEventListener('enso-language-change', decorateYearChart);
+      setTimeout(decorateYearChart, 250);
+      setTimeout(decorateYearChart, 1000);
+    })();
+  </script>
+
+
+  <script id="bilingual-interface">
+    (() => {
+      const STORAGE_KEY = 'enso-health-language';
+      let language = localStorage.getItem(STORAGE_KEY) || 'pt';
+      if (!['pt', 'en'].includes(language)) language = 'pt';
+
+      const T = {
+        pt: {
+          pageTitle: 'ENSO & Saúde | Monitor de Literatura Científica',
+          metaDescription: 'Literatura científica continuamente atualizada sobre El Niño, La Niña, ENSO e saúde humana.',
+          navAria: 'Navegação principal', languageAria: 'Idioma', themeAria: 'Alternar modo escuro', themeTitle: 'Alternar tema', dataSourcesAria: 'Fontes de dados', summaryStatsAria: 'Estatísticas resumidas', filtersAria: 'Filtros de publicações', yearChartAria: 'Publicações por ano',
+          navPublications: 'Publicações', navTrends: 'Tendências', navMethodology: 'Metodologia',
+          heroEyebrow: 'BASE BIBLIOGRÁFICA VIVA',
+          heroTitle: 'Literatura científica sobre <span>ENSO</span> e saúde humana',
+          heroText: 'Um catálogo continuamente atualizado e de alta precisão de publicações científicas cujos títulos conectam explicitamente El Niño, La Niña ou ENSO à saúde humana e a desfechos de saúde.',
+          initiativePrefix: 'Uma iniciativa da plataforma', developedBy: 'Elaborado por', explorePublications: 'Explorar publicações', howItWorks: 'Como funciona',
+          automaticallyUpdated: 'Atualização automática', sourceDescription: 'Descoberta baseada em títulos via OpenAlex e PubMed, com enriquecimento de metadados DOI pelo Crossref.',
+          statPublications: 'Publicações', uniqueRecords: 'registros únicos', statOpenAccess: 'Acesso aberto', statLatestYear: 'Ano mais recente', currentDataset: 'na base atual', statHealthTopics: 'Temas de saúde', thematicGroups: 'grupos temáticos automáticos',
+          searchEyebrow: 'PESQUISE AS EVIDÊNCIAS', scientificPublications: 'Publicações científicas', publicationIntro: 'Somente publicações com um termo de ENSO e um termo predefinido de saúde no título são incluídas. A busca local considera título, autores, resumo, periódico, DOI e temas.', results: 'resultados',
+          filters: 'Filtros', clearAll: 'Limpar tudo', search: 'Buscar', searchPlaceholder: 'ex.: dengue, Brazil, mortality…', publicationYear: 'Ano de publicação', healthTopic: 'Tema de saúde', allTopics: 'Todos os temas', ensoTerm: 'Termo ENSO', allEnsoCategories: 'Todas as categorias ENSO', sourceDatabase: 'Base de origem', allSources: 'Todas as fontes', openAccessOnly: 'Somente acesso aberto', sortBy: 'Ordenar por', newest: 'Mais recentes', mostCited: 'Mais citados', oldest: 'Mais antigos', titleAZ: 'Título A–Z',
+          noPublications: 'Nenhuma publicação encontrada.', emptyHelp: 'Ajuste os filtros ou execute a atualização do GitHub Actions se esta for uma nova instalação.',
+          landscapeEyebrow: 'PANORAMA DA PESQUISA', literatureEvolving: 'Como a literatura está evoluindo', trendIntro: 'Estes resumos são gerados a partir da base bibliográfica atual.', publicationsByYear: 'Publicações por ano', annualUnique: 'Número anual de publicações únicas.', publicationYearCaption: 'Ano de publicação', leadingTopics: 'Principais temas de saúde', topicOverlap: 'Os registros podem pertencer a mais de um grupo temático.', sourceCoverage: 'Cobertura por fonte', sourceCoverageDesc: 'Bases que contribuem para o catálogo integrado.',
+          methodsEyebrow: 'MÉTODOS TRANSPARENTES', howBuilt: 'Como este monitor é construído', methodIntro: 'O monitor foi concebido como um catálogo reprodutível de descoberta, e não como uma afirmação de cobertura exaustiva. Nenhuma base bibliográfica isolada contém todas as publicações científicas.',
+          discover: 'Descobrir', discoverDesc: 'OpenAlex e PubMed são consultados apenas por títulos que contenham simultaneamente um termo ENSO e um termo predefinido de saúde humana.', screen: 'Triar', screenDesc: 'Uma triagem local rigorosa do título verifica independentemente os dois grupos conceituais antes que um registro possa entrar no catálogo.', merge: 'Integrar', mergeDesc: 'Os registros são deduplicados principalmente por DOI e PMID, com um procedimento complementar controlado baseado em título normalizado + ano.', enrich: 'Enriquecer e classificar', enrichDesc: 'O Crossref complementa metadados DOI ausentes, enquanto correspondências transparentes no título atribuem temas de saúde e rótulos ENSO.', publish: 'Publicar', publishDesc: 'Uma GitHub Action agendada reconstrói o catálogo JSON, que é lido diretamente pelo site estático.',
+          scopeLimitations: 'Escopo e limitações da busca', scopeP1: 'O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter pelo menos um termo configurado para El Niño, La Niña ou ENSO e pelo menos um termo predefinido referente à saúde humana, doença, mortalidade, morbidade, nutrição ou outro desfecho de saúde. A coocorrência apenas no resumo, nas palavras-chave ou no texto completo não é suficiente para inclusão.', scopeP2: 'Essa escolha favorece intencionalmente a precisão em detrimento da cobertura máxima. Trabalhos que estudem uma relação ENSO–saúde, mas não expressem ambos os conceitos no título, podem não ser recuperados. O catálogo apoia a descoberta e o monitoramento direcionado de evidências; ele não substitui um protocolo formal de revisão sistemática.',
+          footerTitle: 'Monitor ENSO & Saúde', footerDesc: 'Monitoramento bibliográfico aberto e reprodutível para pesquisas em clima e saúde.', backToTop: 'Voltar ao topo ↑'
+        },
+        en: {
+          pageTitle: 'ENSO & Health Research Monitor',
+          metaDescription: 'Continuously updated scientific literature on El Niño, La Niña, ENSO and human health.',
+          navAria: 'Main navigation', languageAria: 'Language', themeAria: 'Toggle dark mode', themeTitle: 'Toggle theme', dataSourcesAria: 'Data sources', summaryStatsAria: 'Summary statistics', filtersAria: 'Publication filters', yearChartAria: 'Publications per year',
+          navPublications: 'Publications', navTrends: 'Trends', navMethodology: 'Methodology',
+          heroEyebrow: 'LIVING BIBLIOGRAPHIC DATABASE',
+          heroTitle: 'Scientific literature on <span>ENSO</span> and human health',
+          heroText: 'A continuously updated, high-precision catalogue of scientific publications whose titles explicitly connect El Niño, La Niña or ENSO with human health and health outcomes.',
+          initiativePrefix: 'An initiative of the', developedBy: 'Developed by', explorePublications: 'Explore publications', howItWorks: 'How it works',
+          automaticallyUpdated: 'Automatically updated', sourceDescription: 'Title-based discovery through OpenAlex and PubMed, with DOI metadata enrichment through Crossref.',
+          statPublications: 'Publications', uniqueRecords: 'unique records', statOpenAccess: 'Open access', statLatestYear: 'Latest year', currentDataset: 'in the current dataset', statHealthTopics: 'Health topics', thematicGroups: 'automatic thematic groups',
+          searchEyebrow: 'SEARCH THE EVIDENCE', scientificPublications: 'Scientific publications', publicationIntro: 'Only publications with both an ENSO term and a predefined health term in the title are included. Search locally across title, authors, abstract, journal, DOI and topics.', results: 'results',
+          filters: 'Filters', clearAll: 'Clear all', search: 'Search', searchPlaceholder: 'e.g. dengue, Brazil, mortality…', publicationYear: 'Publication year', healthTopic: 'Health topic', allTopics: 'All topics', ensoTerm: 'ENSO term', allEnsoCategories: 'All ENSO categories', sourceDatabase: 'Source database', allSources: 'All sources', openAccessOnly: 'Open access only', sortBy: 'Sort by', newest: 'Newest', mostCited: 'Most cited', oldest: 'Oldest', titleAZ: 'Title A–Z',
+          noPublications: 'No publications found.', emptyHelp: 'Adjust the filters or run the GitHub Actions update if this is a new installation.',
+          landscapeEyebrow: 'RESEARCH LANDSCAPE', literatureEvolving: 'How the literature is evolving', trendIntro: 'These summaries are generated from the current bibliographic dataset.', publicationsByYear: 'Publications by year', annualUnique: 'Annual number of unique publications.', publicationYearCaption: 'Publication year', leadingTopics: 'Leading health topics', topicOverlap: 'Records can belong to more than one thematic group.', sourceCoverage: 'Source coverage', sourceCoverageDesc: 'Databases contributing to the merged catalogue.',
+          methodsEyebrow: 'TRANSPARENT METHODS', howBuilt: 'How this monitor is built', methodIntro: 'The monitor is designed as a reproducible discovery catalogue rather than a claim of exhaustive coverage. No single bibliographic database contains every scientific publication.',
+          discover: 'Discover', discoverDesc: 'OpenAlex and PubMed are queried only for titles containing both an ENSO term and a predefined human-health term.', screen: 'Screen', screenDesc: 'A strict local title gate independently verifies both concept groups before a record can enter the catalogue.', merge: 'Merge', mergeDesc: 'Records are deduplicated primarily by DOI and PMID, with a guarded normalized-title + year fallback.', enrich: 'Enrich & classify', enrichDesc: 'Crossref fills missing DOI metadata, while transparent title matches assign health themes and ENSO labels.', publish: 'Publish', publishDesc: 'A scheduled GitHub Action rebuilds the JSON catalogue and the static website reads it directly.',
+          scopeLimitations: 'Search scope and limitations', scopeP1: 'The public catalogue uses a strict title-first inclusion criterion. A publication title must contain at least one configured term for El Niño, La Niña or ENSO and at least one predefined term referring to human health, disease, mortality, morbidity, nutrition or another health outcome. Abstract-only, keyword-only and full-text-only co-occurrence is not sufficient for inclusion.', scopeP2: 'This intentionally favors precision over maximum recall. Papers that study an ENSO–health relationship but do not express both concepts in the title can therefore be missed. The catalogue supports focused evidence discovery and surveillance; it does not replace a formal systematic-review protocol.',
+          footerTitle: 'ENSO & Health Research Monitor', footerDesc: 'Open, reproducible bibliographic monitoring for climate and health research.', backToTop: 'Back to top ↑'
+        }
+      };
+
+      const setText = (el, value) => { if (el && el.textContent !== value) el.textContent = value; };
+      const setAttr = (el, attr, value) => { if (el && el.getAttribute(attr) !== value) el.setAttribute(attr, value); };
+
+      function translateStatic() {
+        const d = T[language];
+        document.documentElement.lang = language === 'pt' ? 'pt-BR' : 'en';
+        document.title = d.pageTitle;
+        const meta = document.querySelector('meta[name="description"]');
+        if (meta) meta.setAttribute('content', d.metaDescription);
+
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (d[key] !== undefined) setText(el, d[key]);
+        });
+        document.querySelectorAll('[data-i18n-html]').forEach(el => {
+          const key = el.dataset.i18nHtml;
+          if (d[key] !== undefined && el.innerHTML !== d[key]) el.innerHTML = d[key];
+        });
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.dataset.i18nPlaceholder;
+          if (d[key] !== undefined) setAttr(el, 'placeholder', d[key]);
+        });
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+          const key = el.dataset.i18nAria;
+          if (d[key] !== undefined) setAttr(el, 'aria-label', d[key]);
+        });
+        document.querySelectorAll('[data-i18n-title]').forEach(el => {
+          const key = el.dataset.i18nTitle;
+          if (d[key] !== undefined) setAttr(el, 'title', d[key]);
+        });
+
+        document.querySelectorAll('[data-language]').forEach(btn => {
+          const active = btn.dataset.language === language;
+          btn.classList.toggle('active', active);
+          btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+      }
+
+      function translateGeneratedText() {
+        const pt = language === 'pt';
+
+        const oaPct = document.getElementById('statOAPct');
+        if (oaPct) {
+          const m = oaPct.textContent.match(/^(\d+)%\s+(?:of records|dos registros)$/i);
+          if (m) setText(oaPct, pt ? `${m[1]}% dos registros` : `${m[1]}% of records`);
+          else if (/availability identified|disponibilidade identificada/i.test(oaPct.textContent)) setText(oaPct, pt ? 'disponibilidade identificada' : 'availability identified');
+        }
+
+        const active = document.getElementById('activeFilterText');
+        if (active) {
+          let s = active.textContent;
+          if (pt) {
+            if (s === 'Showing the full catalogue.') s = 'Exibindo o catálogo completo.';
+            s = s.replace(/^Filtered by /, 'Filtrado por ')
+                 .replace(/\btext “/g, 'texto “')
+                 .replace(/\byears /g, 'anos ')
+                 .replace(/\bopen access\b/g, 'acesso aberto');
+          } else {
+            if (s === 'Exibindo o catálogo completo.') s = 'Showing the full catalogue.';
+            s = s.replace(/^Filtrado por /, 'Filtered by ')
+                 .replace(/\btexto “/g, 'text “')
+                 .replace(/\banos /g, 'years ')
+                 .replace(/\bacesso aberto\b/g, 'open access');
+          }
+          setText(active, s);
+        }
+
+        const loading = document.getElementById('loadingState');
+        if (loading) {
+          const value = loading.textContent.trim();
+          if (/Loading bibliographic database|Carregando base bibliográfica/i.test(value)) setText(loading, pt ? 'Carregando base bibliográfica…' : 'Loading bibliographic database…');
+          if (/Could not load data\/publications\.json|Não foi possível carregar data\/publications\.json/i.test(value)) {
+            setText(loading, pt ? 'Não foi possível carregar data/publications.json. Verifique se o arquivo existe e se o GitHub Pages está servindo a raiz do repositório.' : 'Could not load data/publications.json. Check that the file exists and GitHub Pages is serving the repository root.');
+          }
+        }
+
+        document.querySelectorAll('.publication-year').forEach(el => {
+          if (/Year unavailable|Ano indisponível/i.test(el.textContent)) setText(el, pt ? 'Ano indisponível' : 'Year unavailable');
+        });
+        document.querySelectorAll('.publication-title').forEach(el => {
+          if (/Untitled record|Registro sem título/i.test(el.textContent)) setText(el, pt ? 'Registro sem título' : 'Untitled record');
+        });
+        document.querySelectorAll('.publication-authors').forEach(el => {
+          let s = el.textContent;
+          if (/^Authors not available$|^Autores não disponíveis$/i.test(s)) s = pt ? 'Autores não disponíveis' : 'Authors not available';
+          const more = s.match(/\+\s*(\d+)\s*(?:more|a mais)$/i);
+          if (more) s = s.replace(/\+\s*\d+\s*(?:more|a mais)$/i, pt ? `+ ${more[1]} a mais` : `+ ${more[1]} more`);
+          setText(el, s);
+        });
+        document.querySelectorAll('.publication-journal').forEach(el => {
+          if (/Source title unavailable|Título da fonte indisponível/i.test(el.textContent)) setText(el, pt ? 'Título da fonte indisponível' : 'Source title unavailable');
+        });
+        document.querySelectorAll('.publication-abstract').forEach(el => {
+          if (/Abstract not available in the harvested metadata\.|Resumo não disponível nos metadados coletados\./i.test(el.textContent)) setText(el, pt ? 'Resumo não disponível nos metadados coletados.' : 'Abstract not available in the harvested metadata.');
+        });
+        document.querySelectorAll('.abstract-toggle').forEach(el => {
+          const s = el.textContent.trim();
+          if (/Show full abstract|Mostrar resumo completo/i.test(s)) setText(el, pt ? 'Mostrar resumo completo' : 'Show full abstract');
+          if (/Collapse abstract|Recolher resumo/i.test(s)) setText(el, pt ? 'Recolher resumo' : 'Collapse abstract');
+        });
+
+        document.querySelectorAll('.publication-meta span').forEach(el => {
+          let s = el.textContent;
+          let m;
+          if ((m = s.match(/^(.+?)\s+(?:citations|citações)\s+\(OpenAlex\)$/i))) s = pt ? `${m[1]} citações (OpenAlex)` : `${m[1]} citations (OpenAlex)`;
+          else if (/^Open access$|^Acesso aberto$/i.test(s)) s = pt ? 'Acesso aberto' : 'Open access';
+          else if ((m = s.match(/^(?:Sources|Fontes):\s*(.+)$/i))) s = pt ? `Fontes: ${m[1]}` : `Sources: ${m[1]}`;
+          else if ((m = s.match(/^(?:Title match|Correspondência no título):\s*(.+)$/i))) s = pt ? `Correspondência no título: ${m[1]}` : `Title match: ${m[1]}`;
+          setText(el, s);
+        });
+
+        document.querySelectorAll('.publication-actions a').forEach(el => {
+          const s = el.textContent.trim();
+          if (/^(Open access|Acesso aberto) ↗$/i.test(s)) setText(el, pt ? 'Acesso aberto ↗' : 'Open access ↗');
+          else if (/^(View publication|Ver publicação) ↗$/i.test(s)) setText(el, pt ? 'Ver publicação ↗' : 'View publication ↗');
+        });
+
+        document.querySelectorAll('.bar-list .muted').forEach(el => {
+          if (/No data yet\.|Ainda sem dados\./i.test(el.textContent)) setText(el, pt ? 'Ainda sem dados.' : 'No data yet.');
+        });
+
+        const updatedAt = document.getElementById('updatedAt');
+        if (updatedAt) {
+          let s = updatedAt.textContent;
+          if (/^Dataset not updated yet\.$|^Base ainda não atualizada\.$/i.test(s)) s = pt ? 'Base ainda não atualizada.' : 'Dataset not updated yet.';
+          else if (/^Bibliographic dataset unavailable\.$|^Base bibliográfica indisponível\.$/i.test(s)) s = pt ? 'Base bibliográfica indisponível.' : 'Bibliographic dataset unavailable.';
+          else if (pt && s.startsWith('Last bibliographic update:')) s = s.replace(/^Last bibliographic update:/, 'Última atualização bibliográfica:').replace(/\(Bahia time\)$/, '(horário da Bahia)');
+          else if (!pt && s.startsWith('Última atualização bibliográfica:')) s = s.replace(/^Última atualização bibliográfica:/, 'Last bibliographic update:').replace(/\(horário da Bahia\)$/, '(Bahia time)');
+          setText(updatedAt, s);
+        }
+      }
+
+      async function refreshUpdateDate() {
+        const el = document.getElementById('updatedAt');
+        if (!el) return;
+        try {
+          const response = await fetch(`data/publications.json?i18n=${Date.now()}`, { cache: 'no-store' });
+          if (!response.ok) return;
+          const payload = await response.json();
+          if (!payload || !payload.generated_at) return;
+          const date = new Date(payload.generated_at);
+          const locale = language === 'pt' ? 'pt-BR' : 'en';
+          const fmt = new Intl.DateTimeFormat(locale, { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Bahia' });
+          setText(el, language === 'pt'
+            ? `Última atualização bibliográfica: ${fmt.format(date)} (horário da Bahia)`
+            : `Last bibliographic update: ${fmt.format(date)} (Bahia time)`);
+        } catch (_) {
+          /* app.js remains responsible for the normal data-load error state */
+        }
+      }
+
+      function applyLanguage() {
+        translateStatic();
+        translateGeneratedText();
+        refreshUpdateDate();
+        window.dispatchEvent(new CustomEvent('enso-language-change', { detail: { language } }));
+      }
+
+      document.querySelectorAll('[data-language]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          language = btn.dataset.language;
+          localStorage.setItem(STORAGE_KEY, language);
+          applyLanguage();
+        });
+      });
+
+      let scheduled = false;
+      const observer = new MutationObserver(() => {
+        if (scheduled) return;
+        scheduled = true;
+        requestAnimationFrame(() => {
+          scheduled = false;
+          translateGeneratedText();
+        });
+      });
+      observer.observe(document.body, { childList: true, subtree: true, characterData: true });
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', applyLanguage, { once: true });
+      } else {
+        applyLanguage();
+      }
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+{
+  "criterion": "ENSO term + predefined human-health term must both occur in title",
+  "input_records": 5402,
+  "included": 413,
+  "excluded": 4989,
+  "inclusion_rate_percent": 7.65,
+  "top_enso_title_terms": [
+    [
+      "El Niño",
+      342
+    ],
+    [
+      "El Niño-Southern Oscillation",
+      98
+    ],
+    [
+      "ENSO",
+      75
+    ],
+    [
+      "La Niña",
+      28
+    ]
+  ],
+  "top_health_title_terms": [
+    [
+      "health",
+      73
+    ],
+    [
+      "dengue",
+      63
+    ],
+    [
+      "mortality",
+      48
+    ],
+    [
+      "malaria",
+      45
+    ],
+    [
+      "outbreaks",
+      34
+    ],
+    [
+      "epidemics",
+      24
+    ],
+    [
+      "cholera",
+      21
+    ],
+    [
+      "influenza",
+      16
+    ],
+    [
+      "outbreak",
+      14
+    ],
+    [
+      "food security",
+      14
+    ],
+    [
+      "public health",
+      12
+    ],
+    [
+      "epidemic",
+      12
+    ],
+    [
+      "leishmaniasis",
+      8
+    ],
+    [
+      "human health",
+      7
+    ],
+    [
+      "diarrhea",
+      7
+    ],
+    [
+      "zika",
+      7
+    ],
+    [
+      "infectious diseases",
+      6
+    ],
+    [
+      "infectious disease",
+      6
+    ],
+    [
+      "food insecurity",
+      5
+    ],
+    [
+      "health impacts",
+      5
+    ],
+    [
+      "malnutrition",
+      4
+    ],
+    [
+      "health risks",
+      4
+    ],
+    [
+      "hantavirus",
+      4
+    ],
+    [
+      "deaths",
+      4
+    ],
+    [
+      "famine",
+      4
+    ],
+    [
+      "nutrition",
+      4
+    ],
+    [
+      "chikungunya",
+      3
+    ],
+    [
+      "leptospirosis",
+      3
+    ],
+    [
+      "rift valley fever",
+      3
+    ],
+    [
+      "death",
+      3
+    ],
+    [
+      "vector-borne diseases",
+      3
+    ],
+    [
+      "hospitalization",
+      3
+    ],
+    [
+      "diarrhoea",
+      3
+    ],
+    [
+      "gastroenteritis",
+      3
+    ],
+    [
+      "mental health",
+      2
+    ],
+    [
+      "japanese encephalitis",
+      2
+    ],
+    [
+      "diabetes",
+      2
+    ],
+    [
+      "diarrheal disease",
+      2
+    ],
+    [
+      "undernutrition",
+      2
+    ],
+    [
+      "asthma",
+      2
+    ],
+    [
+      "vector-borne disease",
+      2
+    ],
+    [
+      "health risk",
+      1
+    ],
+    [
+      "suicide",
+      1
+    ],
+    [
+      "infection risk",
+      1
+    ],
+    [
+      "child health",
+      1
+    ],
+    [
+      "arboviral diseases",
+      1
+    ],
+    [
+      "excess mortality",
+      1
+    ],
+    [
+      "morbidity",
+      1
+    ],
+    [
+      "stroke",
+      1
+    ],
+    [
+      "health outcomes",
+      1
+    ],
+    [
+      "stunting",
+      1
+    ],
+    [
+      "enteric infections",
+      1
+    ],
+    [
+      "disease incidence",
+      1
+    ],
+    [
+      "waterborne disease",
+      1
+    ],
+    [
+      "nutritional status",
+      1
+    ],
+    [
+      "respiratory disease",
+      1
+    ],
+    [
+      "respiratory infections",
+      1
+    ],
+    [
+      "ross river virus",
+      1
+    ],
+    [
+      "anxiety",
+      1
+    ],
+    [
+      "pneumonia",
+      1
+    ],
+    [
+      "diarrhoeal diseases",
+      1
+    ],
+    [
+      "hospital admissions",
+      1
+    ],
+    [
+      "arboviral disease",
+      1
+    ],
+    [
+      "disease transmission",
+      1
+    ],
+    [
+      "yellow fever",
+      1
+    ],
+    [
+      "depression",
+      1
+    ]
+  ],
+  "health_categories": [
+    [
+      "Vector-borne diseases",
+      145
+    ],
+    [
+      "Infectious diseases",
+      96
+    ],
+    [
+      "General human health",
+      73
+    ],
+    [
+      "Mortality, morbidity & healthcare",
+      60
+    ],
+    [
+      "Waterborne & enteric diseases",
+      39
+    ],
+    [
+      "Nutrition & food security",
+      32
+    ],
+    [
+      "Respiratory health",
+      21
+    ],
+    [
+      "Mental health",
+      5
+    ],
+    [
+      "Other chronic diseases",
+      2
+    ],
+    [
+      "Maternal, child & reproductive health",
+      1
+    ],
+    [
+      "Cardiovascular health",
+      1
+    ]
+  ],
+  "rejection_reasons": [
+    [
+      "Title contains neither a configured ENSO term nor a configured human-health term.",
+      3149
+    ],
+    [
+      "Title contains an ENSO term but no configured human-health term.",
+      1039
+    ],
+    [
+      "Title contains a health term but no configured ENSO term.",
+      801
+    ]
+  ],
+  "note": "This audit does not modify publications.json and makes no API calls."
+}
