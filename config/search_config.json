@@ -6,7 +6,7 @@
   },
   "inclusion": {
     "strategy": "title_first_with_false_positive_exclusions",
-    "criterion": "The publication title must contain at least one ENSO term and at least one predefined human-health term. Clear false positives are then excluded (non-human/ecological outcomes, Spanish 'el niño' meaning child, meteorological outbreaks, corrections/errata, lexical false positives, and food-security/famine/nutrition-only titles without a direct health outcome).",
+    "criterion": "The publication title must contain at least one ENSO/El Niño/La Niña term or ENSO indicator and at least one predefined human-health, disease, vector/host, pathogen, environmental-health exposure, sanitation or occupational-health term. Clear false positives are then excluded.",
     "use_abstract_for_inclusion": false
   },
   "enso_terms": [
@@ -18,7 +18,21 @@
     "El Niño-Southern Oscillation",
     "El Nino-Southern Oscillation",
     "El Niño Southern Oscillation",
-    "El Nino Southern Oscillation"
+    "El Nino Southern Oscillation",
+    "Southern Oscillation Index",
+    "SOI",
+    "Oceanic Niño Index",
+    "Oceanic Nino Index",
+    "ONI",
+    "Niño 3.4",
+    "Nino 3.4",
+    "Niño-3.4",
+    "Nino-3.4",
+    "Multivariate ENSO Index",
+    "MEI",
+    "El Niño Modoki",
+    "El Nino Modoki",
+    "ENSO Modoki"
   ],
   "health_categories": {
     "Vector-borne diseases": [
@@ -40,7 +54,16 @@
       "mosquito-borne disease",
       "mosquito-borne diseases",
       "arboviral disease",
-      "arboviral diseases"
+      "arboviral diseases",
+      "oropouche",
+      "oropouche virus",
+      "mayaro",
+      "mayaro virus",
+      "schistosomiasis",
+      "plague",
+      "yersinia pestis",
+      "leptospira",
+      "plasmodium"
     ],
     "Waterborne & enteric diseases": [
       "cholera",
@@ -57,7 +80,23 @@
       "enteric diseases",
       "enteric infection",
       "enteric infections",
-      "cryptosporidiosis"
+      "cryptosporidiosis",
+      "rotavirus",
+      "norovirus",
+      "shigella",
+      "salmonella",
+      "campylobacter",
+      "e. coli",
+      "escherichia coli",
+      "giardiasis",
+      "giardia",
+      "typhoid",
+      "typhoid fever",
+      "cryptosporidium",
+      "vibrio",
+      "vibrio cholerae",
+      "hepatitis a",
+      "salmonellosis"
     ],
     "Respiratory health": [
       "respiratory disease",
@@ -69,7 +108,15 @@
       "pneumonia",
       "influenza",
       "lung disease",
-      "lung diseases"
+      "lung diseases",
+      "copd",
+      "chronic obstructive pulmonary disease",
+      "bronchitis",
+      "acute respiratory infection",
+      "acute respiratory infections",
+      "ari",
+      "respiratory admission",
+      "respiratory admissions"
     ],
     "Cardiovascular health": [
       "cardiovascular disease",
@@ -80,7 +127,11 @@
       "coronary heart disease",
       "stroke",
       "ischemic heart disease",
-      "ischaemic heart disease"
+      "ischaemic heart disease",
+      "cardiac arrest",
+      "myocardial infarction",
+      "heart attack",
+      "heart attacks"
     ],
     "Mortality, morbidity & healthcare": [
       "mortality",
@@ -98,7 +149,11 @@
       "emergency department visit",
       "emergency department visits",
       "injury",
-      "injuries"
+      "injuries",
+      "drowning",
+      "drownings",
+      "displacement",
+      "forced displacement"
     ],
     "Maternal, child & reproductive health": [
       "maternal health",
@@ -119,7 +174,17 @@
       "infant mortality",
       "neonatal mortality",
       "neonatal health",
-      "reproductive health"
+      "reproductive health",
+      "child mortality",
+      "under-five mortality",
+      "under 5 mortality",
+      "maternal morbidity",
+      "miscarriage",
+      "miscarriages",
+      "spontaneous abortion",
+      "spontaneous abortions",
+      "premature birth",
+      "premature births"
     ],
     "Nutrition & food security": [
       "nutrition",
@@ -130,7 +195,11 @@
       "wasting",
       "food security",
       "food insecurity",
-      "famine"
+      "famine",
+      "acute malnutrition",
+      "severe acute malnutrition",
+      "anemia",
+      "anaemia"
     ],
     "Mental health": [
       "mental health",
@@ -143,7 +212,12 @@
       "psychological distress",
       "post-traumatic stress disorder",
       "posttraumatic stress disorder",
-      "ptsd"
+      "ptsd",
+      "sleep disturbance",
+      "sleep disturbances",
+      "sleep disorder",
+      "sleep disorders",
+      "violence"
     ],
     "Heat-related health": [
       "heat-related illness",
@@ -155,7 +229,13 @@
       "heat-related mortality",
       "heat mortality",
       "heat-related morbidity",
-      "thermal discomfort"
+      "thermal discomfort",
+      "heat-related death",
+      "heat-related deaths",
+      "heat stress",
+      "heat exhaustion",
+      "dehydration",
+      "occupational heat stress"
     ],
     "Infectious diseases": [
       "infectious disease",
@@ -170,7 +250,15 @@
       "epidemic",
       "epidemics",
       "outbreak",
-      "outbreaks"
+      "outbreaks",
+      "meningitis",
+      "covid-19",
+      "covid 19",
+      "sars-cov-2",
+      "sars cov 2",
+      "hand foot and mouth disease",
+      "hand-foot-and-mouth disease",
+      "hfmd"
     ],
     "Other chronic diseases": [
       "kidney disease",
@@ -192,6 +280,72 @@
       "health risk",
       "health risks",
       "disease burden"
+    ],
+    "Vectors & hosts": [
+      "aedes",
+      "aedes aegypti",
+      "aedes albopictus",
+      "anopheles",
+      "culex",
+      "mosquito abundance",
+      "mosquito density",
+      "vector abundance",
+      "vector density",
+      "vectorial capacity",
+      "vector competence",
+      "rodent",
+      "rodents",
+      "sand fly",
+      "sand flies",
+      "sandfly",
+      "sandflies",
+      "phlebotomus",
+      "lutzomyia",
+      "triatoma",
+      "triatomine",
+      "triatomines",
+      "flea",
+      "fleas"
+    ],
+    "Water, sanitation & contamination": [
+      "water-related disease",
+      "water-related diseases",
+      "water contamination",
+      "drinking water safety",
+      "sanitation",
+      "water sanitation"
+    ],
+    "Air pollution, smoke & fire exposure": [
+      "wildfire smoke",
+      "biomass burning",
+      "air pollution",
+      "particulate matter",
+      "pm2.5",
+      "pm 2.5",
+      "fine particulate matter",
+      "smoke haze",
+      "haze",
+      "smoke exposure"
+    ],
+    "Fungal diseases": [
+      "coccidioidomycosis",
+      "valley fever",
+      "coccidioides",
+      "fungal infection",
+      "fungal infections"
+    ],
+    "Renal health": [
+      "acute kidney injury",
+      "aki",
+      "renal failure",
+      "kidney failure"
+    ],
+    "Occupational health": [
+      "occupational health",
+      "outdoor worker",
+      "outdoor workers",
+      "worker health",
+      "workers health"
     ]
   },
   "openalex": {
@@ -203,16 +357,278 @@
     "per_page": 100,
     "max_records_total": 50000,
     "search_scope": "title",
-    "query_strategy": "combined_health_terms"
+    "query_strategy": "combined_health_terms",
+    "query_chunk_size": 35
   },
   "pubmed": {
     "batch_size": 200,
     "max_records_total": 10000,
     "query_strategy": "combined_health_terms",
-    "search_scope": "title"
+    "search_scope": "title",
+    "query_chunk_size": 40
   },
   "crossref": {
     "enabled": true,
     "max_enrichments_per_run": 500
-  }
+  },
+  "enso_indicator_terms": [
+    "Southern Oscillation Index",
+    "SOI",
+    "Oceanic Niño Index",
+    "Oceanic Nino Index",
+    "ONI",
+    "Niño 3.4",
+    "Nino 3.4",
+    "Niño-3.4",
+    "Nino-3.4",
+    "Multivariate ENSO Index",
+    "MEI"
+  ],
+  "embase": {
+    "enabled": true,
+    "search_scope": "title",
+    "query_chunk_size": 30,
+    "page_size": 25,
+    "max_records_total": 10000,
+    "requires_env": [
+      "ELSEVIER_API_KEY"
+    ],
+    "optional_env": [
+      "ELSEVIER_INSTTOKEN",
+      "ELSEVIER_AUTHTOKEN"
+    ]
+  },
+  "global_index_medicus": {
+    "enabled": true,
+    "mode": "html_scrape",
+    "base_url": "https://pesquisa.bvsalud.org/gim/",
+    "search_scope": "sensitive_tw_discovery_then_local_title_first",
+    "regional_indexes": [
+      "AIM",
+      "IMEMR",
+      "IMSEAR",
+      "LILACS",
+      "WPRIM"
+    ],
+    "exclude_medline": false,
+    "query_chunk_size": 32,
+    "page_size": 20,
+    "max_pages_per_query": 50,
+    "max_records_total": 10000,
+    "request_delay_seconds": 1.25,
+    "timeout_seconds": 45,
+    "retry_attempts": 4,
+    "note": "Sensitive GIM discovery uses TW plus DeCS/MH and all GIM databases. Final inclusion remains strict title-first locally; MEDLINE/PubMed overlap is deduplicated later.",
+    "search_all_gim": true,
+    "controlled_exposure_terms": [
+      "El Niño Oscilación del Sur"
+    ],
+    "free_text_exposure_terms": [
+      "El Niño-Southern Oscillation",
+      "El Nino-Southern Oscillation",
+      "El Niño Southern Oscillation",
+      "El Nino Southern Oscillation",
+      "ENSO",
+      "ENOS",
+      "fenómeno El Niño",
+      "fenomeno El Nino",
+      "fenômeno El Niño",
+      "corriente El Niño",
+      "corriente del Niño",
+      "evento El Niño",
+      "evento El Nino",
+      "Oceanic Niño Index",
+      "Oceanic Nino Index",
+      "Índice Niño Oceánico",
+      "Indice Nino Oceanico",
+      "Southern Oscillation Index",
+      "índice de oscilación del sur",
+      "indice de oscilacion del sur",
+      "SOI",
+      "ONI",
+      "Niño 3.4",
+      "Nino 3.4",
+      "Niño 3",
+      "Nino 3",
+      "El Niño Modoki",
+      "El Nino Modoki",
+      "ENSO Modoki",
+      "fenómeno La Niña",
+      "fenomeno La Nina",
+      "evento La Niña",
+      "evento La Nina"
+    ],
+    "health_aliases": {
+      "General human health": [
+        "saúde",
+        "salud",
+        "doença",
+        "doenças",
+        "enfermedad",
+        "enfermedades",
+        "mortalidade",
+        "mortalidad",
+        "morbidade",
+        "morbilidad",
+        "impacto na saúde",
+        "impacto en la salud",
+        "efeitos na saúde",
+        "efectos en la salud"
+      ],
+      "Vector-borne diseases": [
+        "malária",
+        "leishmaniose",
+        "leishmaniose visceral",
+        "leishmaniasis visceral",
+        "leptospirose",
+        "febre amarela",
+        "fiebre amarilla",
+        "esquistossomose",
+        "esquistosomiasis"
+      ],
+      "Waterborne & enteric diseases": [
+        "cólera",
+        "diarreia",
+        "diarrea",
+        "gastroenterite",
+        "gastroenteritis",
+        "febre tifóide",
+        "fiebre tifoidea"
+      ],
+      "Mental health": [
+        "saúde mental",
+        "salud mental",
+        "depressão",
+        "depresión",
+        "ansiedade",
+        "ansiedad",
+        "suicídio",
+        "suicidio",
+        "estresse psicológico",
+        "estrés psicológico"
+      ],
+      "Maternal, child & reproductive health": [
+        "saúde materna",
+        "salud materna",
+        "mortalidade infantil",
+        "mortalidad infantil",
+        "baixo peso ao nascer",
+        "bajo peso al nacer",
+        "parto prematuro",
+        "parto pretérmino",
+        "natimorto",
+        "mortinato"
+      ],
+      "Mortality, morbidity & healthcare": [
+        "hospitalização",
+        "hospitalización",
+        "internação hospitalar",
+        "ingreso hospitalario",
+        "admissão hospitalar",
+        "admisión hospitalaria",
+        "lesão",
+        "lesões",
+        "lesión",
+        "lesiones",
+        "acidente",
+        "acidentes",
+        "accidente",
+        "accidentes"
+      ],
+      "Nutrition & food security": [
+        "desnutrição",
+        "desnutrición",
+        "subnutrição",
+        "subnutrición",
+        "estado nutricional",
+        "insegurança alimentar",
+        "inseguridad alimentaria"
+      ],
+      "Cardiovascular health": [
+        "doença cardiovascular",
+        "enfermedad cardiovascular",
+        "infarto do miocárdio",
+        "infarto de miocardio",
+        "acidente vascular cerebral",
+        "accidente cerebrovascular"
+      ],
+      "Respiratory health": [
+        "asma",
+        "pneumonia",
+        "bronquite",
+        "bronquitis",
+        "doença pulmonar obstrutiva crônica",
+        "enfermedad pulmonar obstructiva crónica",
+        "EPOC"
+      ],
+      "Heat-related health": [
+        "estresse térmico",
+        "estrés térmico",
+        "golpe de calor",
+        "exaustão pelo calor",
+        "agotamiento por calor"
+      ],
+      "Renal health": [
+        "lesão renal aguda",
+        "lesión renal aguda",
+        "insuficiência renal",
+        "insuficiencia renal",
+        "doença renal",
+        "enfermedad renal"
+      ],
+      "Occupational health": [
+        "estresse térmico ocupacional",
+        "estrés térmico ocupacional",
+        "saúde ocupacional",
+        "salud ocupacional",
+        "trabalhadores ao ar livre",
+        "trabajadores al aire libre"
+      ],
+      "Vectors & hosts": [
+        "mosquito",
+        "mosquitos",
+        "vetor",
+        "vetores",
+        "vector",
+        "vectores",
+        "roedor",
+        "roedores",
+        "roedor(es)"
+      ],
+      "Water, sanitation & contamination": [
+        "saneamento",
+        "saneamiento",
+        "contaminação da água",
+        "contaminación del agua",
+        "água potável",
+        "agua potable"
+      ],
+      "Air pollution, smoke & fire exposure": [
+        "poluição do ar",
+        "contaminación del aire",
+        "polución del aire",
+        "fumaça",
+        "humo",
+        "incêndio florestal",
+        "incendio forestal",
+        "queima de biomassa",
+        "quema de biomasa"
+      ],
+      "Fungal diseases": [
+        "infecção fúngica",
+        "infección fúngica",
+        "coccidioidomicose",
+        "coccidioidomicosis"
+      ]
+    },
+    "known_item_titles": [
+      "Impacts of El Niño Southern Oscillation on the dengue transmission dynamics in the Metropolitan Region of Recife, Brazil",
+      "Effects of El Niño-Southern Oscillation on human visceral leishmaniasis in the Brazilian State of Mato Grosso do Sul"
+    ]
+  },
+  "enso_case_sensitive_acronyms": [
+    "SOI",
+    "ONI",
+    "MEI"
+  ]
 }
