@@ -1,0 +1,2271 @@
+{
+  "audit": {
+    "status": "ok",
+    "mode": "html_scrape",
+    "search_scope": "sensitive_tw_discovery_then_local_title_first",
+    "regional_indexes": [
+      "ALL"
+    ],
+    "search_all_gim": true,
+    "query_chunks_per_index": 13,
+    "http_requests": 387,
+    "pages_parsed": 387,
+    "resource_links_found": 7692,
+    "retrieved_raw": 7692,
+    "retrieved_unique": 44,
+    "second_stage_included": 44,
+    "second_stage_excluded": 2,
+    "parser_empty_pages": 0,
+    "second_stage_exclusion_reasons": {
+      "child_not_enso": 2
+    },
+    "inclusion_tiers": {
+      "included_direct": 43,
+      "included_broad": 1
+    },
+    "per_index_unique": {
+      "ALL": 44
+    }
+  },
+  "publications": [
+    {
+      "id": "gim:biblio-1588260",
+      "title": "Incidencia de dengue y su relación con el índice oceánico de El Niño, como variable sensible para anticipar brotes en la región Caribe colombiana / Dengue incidence and its relationship with El Niño oceanic index, as a sensitive variable to anticipate outbreaks in the Colombian Caribbean region",
+      "year": 2010,
+      "publication_date": "2010",
+      "authors": [
+        "Montoya-Rojas, Mayra",
+        "Noguera-David, Diana",
+        "Fuertes-Bucheli, José F",
+        "Pacheco-López, Robinson"
+      ],
+      "journal": "Univ. salud ; 27(1), enero-abril 2025.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1588260",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1647351",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-511079",
+      "title": "Fenómeno el niño y desastres naturales: intervenciones en salud pública para la preparación y respuesta / El niño phenomenon and natural disasters: public health interventions for disaster preparedness and response",
+      "year": 2017,
+      "publication_date": "2017",
+      "authors": [
+        "Lin ZHANG",
+        "Jin LI",
+        "Xue LIN",
+        "Jun XIAO"
+      ],
+      "journal": "Chinese Journal of Gastroenterology ; (12): 147-151, 2017.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-511079",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-795386",
+      "health_topics": [
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "public health",
+          "health",
+          "salud"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-483166",
+      "title": "Assessing the roles of temperature, precipitation, and enso in dengue re-emergence on the Texas-Mexico border region / Evaluación del clima y del ENSO en la reemergencia del dengue en la frontera Texas-México",
+      "year": 2008,
+      "publication_date": "2008",
+      "authors": [
+        "Brunkard, Joan M",
+        "Cifuentes, Enrique",
+        "Rothenberg, Stephen J"
+      ],
+      "journal": "Salud pública Méx ; 50(3): 227-234, mayo-jun. 2008. ilus, tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-483166",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-483166",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1570426",
+      "title": "Impacts of El Niño Southern Oscillation on the dengue transmission dynamics in the Metropolitan Region of Recife, Brazil",
+      "year": 2024,
+      "publication_date": "2024",
+      "authors": [
+        "Ramos, Daniel Garkauskas"
+      ],
+      "journal": "São Paulo; s.n; 2024. 139 p.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1570426",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1387545",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-357090",
+      "title": "Vibrios no epidémicos y Vibrio cholerae O1 asociados a enfermedad diarréica aguda. Evento climatológico \"El Niño\"-1998. Hospital Nacional Dos de Mayo / Non-epidemic vibrios and vibrio cholerae O1 associated with acute diarrhea from cases given during",
+      "year": 1999,
+      "publication_date": "1999",
+      "authors": [
+        "Ibarra, Jimmy O",
+        "Delgado, Alvaro",
+        "Alvarado, Débora E"
+      ],
+      "journal": "An. Fac. Med. (Perú) ; 60(4): 251-256, oct. 1999. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-357090",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-357090",
+      "health_topics": [
+        "Waterborne & enteric diseases",
+        "Infectious diseases",
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "diarrhea",
+          "vibrio",
+          "vibrio cholerae",
+          "epidemic",
+          "enfermedad"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-788633",
+      "title": "Análisis de la epidemia de muertes infantiles en Talara durante el Fenómeno El Niño de 1997-1998: ¿estamos preparados para enfrentar otra? / Analysis of children's deaths epidemic in Talara during the 1997-1998 El Niño Phenomenon: ¿are we prepared to face another one?",
+      "year": 2012,
+      "publication_date": "2012",
+      "authors": [
+        "Kyung-Jin KIM",
+        "Meyung-Kug KIM",
+        "Bong-Goo YOO"
+      ],
+      "journal": "Journal of Korean Epilepsy Society ; : 67-69, 2012.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-788633",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-499675",
+      "health_topics": [
+        "Mortality, morbidity & healthcare",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "deaths",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-45866",
+      "title": "Vibrios no epidémicos y Vibrio cholerae O1 asociados a enfermedad diarréica aguda. Evento climatológico \"El Niño\"-1998. Hospital Nacional Dos de Mayo / Non-epidemic vibrios and vibrio cholerae O1 associated with acute diarrhea from cases given during",
+      "year": 2000,
+      "publication_date": "2000",
+      "authors": [
+        "Cheol-Woong YU",
+        "Cheong-Won PARK",
+        "Byung-Yoen HWANG",
+        "Joon-Young SONG",
+        "Ok PARK",
+        "Jang-Wook SOHN",
+        "Hee-Jin CHEONG",
+        "Woo-Joo KIM",
+        "Min-Ja KIM",
+        "Seung-Chul PARK"
+      ],
+      "journal": "Korean Journal of Infectious Diseases ; : 212-218, 2000.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-45866",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-357090",
+      "health_topics": [
+        "Waterborne & enteric diseases",
+        "Infectious diseases",
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "diarrhea",
+          "vibrio",
+          "vibrio cholerae",
+          "epidemic",
+          "enfermedad"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1153967",
+      "title": "Effects of El Niño-Southern Oscillation on human visceral leishmaniasis in the Brazilian State of Mato Grosso do Sul",
+      "year": 2021,
+      "publication_date": "2021",
+      "authors": [
+        "Nemr, Katia",
+        "Simões-Zenari, Marcia",
+        "Almeida, Vanessa Cássia de",
+        "Martins, Glauciene Amaral",
+        "Saito, Isabele Tiemi"
+      ],
+      "journal": "Clinics ; 76, 2021. tab, graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1153967",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1091237",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "leishmaniasis"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1042185",
+      "title": "Letalidad por dengue en centros asistenciales del Seguro Social de Perú durante El Niño Costero, Norte Perú, 2017 / Dengue lethality in health care centers from the Peruvian Social Security during the Coastal Child, Northern Peru, 2017",
+      "year": 2019,
+      "publication_date": "2019",
+      "authors": [
+        "Montenegro, Sayane Marlla Silva Leite",
+        "Rodrigues, Carlos Henrique Miranda"
+      ],
+      "journal": "Rev. Bras. Enferm. (Online) ; 72(6): 1428-1434, Nov.-Dec. 2019. tab, graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1042185",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1093567",
+      "health_topics": [
+        "Vector-borne diseases",
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "health"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-1009689",
+      "title": "Sazonalidade nas notificações de dengue das capitais da Amazônia e os impactos do El Niño/La Niña / Seasonality of dengue reporting in state capitals in the Brazilian Amazon and impacts of El Niño/La Niña / Estacionalidad en las notificaciones de dengue de las capitales de la Amazonia y los impactos de El Niño/La Niña",
+      "year": 2019,
+      "publication_date": "2019",
+      "authors": [
+        "Kai CUI",
+        "Yang LUAN",
+        "Zhe TANG",
+        "Chuan-Chang LI",
+        "Tao WANG",
+        "Shao-Gang WANG",
+        "Zhong CHEN",
+        "Ji-Hong LIU"
+      ],
+      "journal": "Asian j. androl ; (6): 508-515, 2019.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-1009689",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1039426",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "La Niña"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "La Niña"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-713928",
+      "title": "Fenómeno ENOS y el dengue, Regiones Pacífico Central y Huetar Atlántico, Costa Rica, 1990 a 2011 / ENSO and Dengue, in the Pacifico Central and Huetar Atlántico Regions, Costa Rica, 1990 to 2011",
+      "year": 2018,
+      "publication_date": "2018",
+      "authors": [
+        "Young-Soo PARK",
+        "Yohei KOGEICHI",
+        "Yoichi SHIDA",
+        "Hiroyuki NAKASE"
+      ],
+      "journal": "Korean Journal of Neurotrauma ; : 6-13, 2018.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-713928",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1507070",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-488935",
+      "title": "Assessing the roles of temperature, precipitation, and enso in dengue re-emergence on the Texas-Mexico border region / Evaluación del clima y del ENSO en la reemergencia del dengue en la frontera Texas-México",
+      "year": 1846,
+      "publication_date": "1846",
+      "authors": [
+        "Lacerda, Josimari Telino de",
+        "Castilho, Euclides Ayres de",
+        "Calvo, Maria Cristina Marino",
+        "Freitas, Sérgio Fernando Torres de"
+      ],
+      "journal": "Cad. saúde pública ; 24(8): 1846-1858, ago. 2008. ilus, tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-488935",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-483166",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-449215",
+      "title": "Análisis de la epidemia de muertes infantiles en Talara durante el Fenómeno El Niño de 1997-1998: ¿estamos preparados para enfrentar otra? / Analysis of children's deaths epidemic in Talara during the 1997-1998 El Niño Phenomenon: ¿are we prepared to face another one?",
+      "year": 2008,
+      "publication_date": "2008",
+      "authors": [
+        "Xiaolei HOU",
+        "Bailing LI",
+        "Lei ZHAO",
+        "Shengdong HUANG",
+        "Zhiyun XU",
+        "Guanxin ZHANG"
+      ],
+      "journal": "Journal of Integrative Medicine ; (12): 381-6, 2008.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-449215",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-499675",
+      "health_topics": [
+        "Mortality, morbidity & healthcare",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "deaths",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-218509",
+      "title": "El Niño and associated outbreaks of severe malaria in highland populations in Irian Jaya, Indonesia: a review and epidemiological perspective.",
+      "year": 2001,
+      "publication_date": "2001",
+      "authors": [
+        "Ji-Yong LEE",
+        "Joon-Shik MOON",
+        "Bum-Gi HAN",
+        "Hyun-Duk YANG",
+        "Joon-Bum KWON",
+        "Sung-Ik LEE",
+        "Sung-Soo LEE"
+      ],
+      "journal": "Journal of the Korean Neurological Association ; : 359-363, 2001.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-218509",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/sea-34103",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "malaria",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-81867",
+      "title": "Evidencia del impacto del fenómeno del pacífico-Oscilación del sur (ENSO) en la ocurrencia del dengue hemorrágico en colombia durante 1997",
+      "year": 1999,
+      "publication_date": "1999",
+      "authors": [
+        "Tae-Young YOUN",
+        "Seok-Ki JUNG",
+        "Seung-Ho CHANG"
+      ],
+      "journal": "Korean Journal of Dermatology ; : 1239-1246, 1999.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-81867",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-237291",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1342952",
+      "title": "Effects of El Niño-Southern Oscillation on human visceral leishmaniasis in the Brazilian State of Mato Grosso do Sul",
+      "year": 2020,
+      "publication_date": "2020",
+      "authors": [
+        "Alves, Isabella Sichieri Germano",
+        "Favrettro, Carla Oliveira",
+        "Baéz-Quintero, Liliana Carolina",
+        "Bento, Laura Imbriani",
+        "Oliveira, Natália Maria Castorino de",
+        "Duque, Cristiane",
+        "Danelon, Marcelle"
+      ],
+      "journal": "Rev. Cient. CRO-RJ (Online) ; 5(3): 48-53, Dec. 2020.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1342952",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1091237",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "leishmaniasis"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-794564",
+      "title": "Fenómeno el niño y desastres naturales: intervenciones en salud pública para la preparación y respuesta / El niño phenomenon and natural disasters: public health interventions for disaster preparedness and response",
+      "year": 2016,
+      "publication_date": "2016",
+      "authors": [
+        "Mesquita Filho, Marcos"
+      ],
+      "journal": "Fisioter. mov ; 29(4): 703-712, Out.-Dec. 2016. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-794564",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-795386",
+      "health_topics": [
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "public health",
+          "health",
+          "salud"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-95813",
+      "title": "Dermatite epidêmica por Paederus irritans em Piura, Perú, 1999, relacionada ao fenômeno El Niño / Epidemic dermatits by Paederus irritans in Piura, Peru at 1999, related to El Niño phenomenon",
+      "year": 2003,
+      "publication_date": "2003",
+      "authors": [
+        "Ji-Man LEE",
+        "Jung-Il KIM",
+        "Woo-Hyun CHEON",
+        "Doo-Kyo JUNG",
+        "Sung-Pa PARK",
+        "Chung-Kyu SUH"
+      ],
+      "journal": "Journal of the Korean Neurological Association ; : 408-411, 2003.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-95813",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-331781",
+      "health_topics": [
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_broad",
+        "reason_code": "generic_health_signal",
+        "reason": "Retained: title explicitly links ENSO with a broad human-health, mortality, morbidity or disease signal.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-521705",
+      "title": "El Niño and associated outbreaks of severe malaria in highland populations in Irian Jaya, Indonesia: a review and epidemiological perspective.",
+      "year": 2000,
+      "publication_date": "2000",
+      "authors": [
+        "Zhibin LI",
+        "Xiaying ZOU",
+        "Huangwen LAI",
+        "Xiaochun WANG"
+      ],
+      "journal": "Chinese Journal of Pathophysiology ; (12)2000.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-521705",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/sea-34103",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "malaria",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-103019",
+      "title": "Fenómeno \"El Niño\" boletín epidemiológico del comportamiento de las enfermedades transmisibles: enero-abril 1998 / Phenomenon \\\"El Niño\\\" epidemiological bulletin on behaviour of communicable diseases: January-April 1998",
+      "year": 1998,
+      "publication_date": "1998",
+      "authors": [
+        "Sung-Min PARK",
+        "Jun-Hong LEE",
+        "Eun-Young SEONG",
+        "Yang-Ho KANG",
+        "Jong-Hoon LIM",
+        "Soo-Bong LEE",
+        "Woo-Chul LEE",
+        "Chang-Won LEE",
+        "Im-Soo KWAK",
+        "Ha-Youn RHA"
+      ],
+      "journal": "Korean Journal of Nephrology ; : 352-356, 1998.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-103019",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-219205",
+      "health_topics": [
+        "Infectious diseases",
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "WPRIM"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "communicable diseases",
+          "enfermedades"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-459891",
+      "title": "Análisis de la epidemia de muertes infantiles en Talara durante el Fenómeno El Niño de 1997-1998: ¿estamos preparados para enfrentar otra? / Analysis of children's deaths epidemic in Talara during the 1997-1998 El Niño Phenomenon: ¿are we prepared to face another one?",
+      "year": 2007,
+      "publication_date": "2007",
+      "authors": [
+        "Boa-Sorte, Ney",
+        "Neri, Luciana A",
+        "Leite, Maria Efigênia Q",
+        "Brito, Sheila M",
+        "Meirelles, Ana Regina",
+        "Luduvice, Fábia B. S",
+        "Santos, Jamille P",
+        "Viveiros, Marcela R",
+        "Ribeiro-Júnior, Hugo C"
+      ],
+      "journal": "J. pediatr. (Rio J.) ; 83(4): 349-356, July-Aug. 2007. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-459891",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-499675",
+      "health_topics": [
+        "Mortality, morbidity & healthcare",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "deaths",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:sea-34103",
+      "title": "El Niño and associated outbreaks of severe malaria in highland populations in Irian Jaya, Indonesia: a review and epidemiological perspective.",
+      "year": 1999,
+      "publication_date": "1999",
+      "authors": [
+        "UNESCO"
+      ],
+      "journal": "Southeast Asian J Trop Med Public Health ; 1999 Dec; 30(4): 608-19",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "sea-34103",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/sea-34103",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "malaria",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-830817",
+      "title": "Fenómeno el niño y desastres naturales: intervenciones en salud pública para la preparación y respuesta / El niño phenomenon and natural disasters: public health interventions for disaster preparedness and response",
+      "year": 2016,
+      "publication_date": "2016",
+      "authors": [
+        "Escalante-Izeta, Ericka Ileana",
+        "Haua-Navarro, Karime",
+        "Moreno-Landa, Luz Irene",
+        "Pérez-Lizaur, Ana Bertha"
+      ],
+      "journal": "Salud ment ; 39(3): 157-163, May.-Jun. 2016. graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-830817",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-795386",
+      "health_topics": [
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "public health",
+          "health",
+          "salud"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1612035",
+      "title": "Incidencia de dengue y su relación con el índice oceánico de El Niño, como variable sensible para anticipar brotes en la región Caribe colombiana / Dengue incidence and its relationship with El Niño oceanic index, as a sensitive variable to anticipate outbreaks in the Colombian Caribbean region",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Silva Júnior, José Lima",
+        "Firmino, Ramon Targino",
+        "Granville-Garcia, Ana Flávia"
+      ],
+      "journal": "Arq. Odontol. (Online) ; 61: 100-109, 2025. ilus, tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1612035",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1647351",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1355716",
+      "title": "Impacts of El Niño Southern Oscillation on the dengue transmission dynamics in the Metropolitan Region of Recife, Brazil",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Mendes, Brenda Nathalye Nunes",
+        "Christmann, Mara Keli",
+        "Schmidt, Jelson Budal",
+        "Abreu, Eduarda Silveira de"
+      ],
+      "journal": "Audiol., Commun. res ; 27, 2022. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1355716",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1387545",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1415867",
+      "title": "Effects of El Niño-Southern Oscillation on human visceral leishmaniasis in the Brazilian State of Mato Grosso do Sul",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Azevedo, Samir Gabriel Vasconcelos",
+        "Moreira, Andréa Carvalho Araújo",
+        "Santos, Saulo Barreto Cunha dos",
+        "Oliveira, Francisco Eduardo Silva de",
+        "Magalhães Júnior, José Wellington Cruz"
+      ],
+      "journal": "Estud. Interdiscip. Envelhec. (Online) ; 25(2): 171-196, 2020. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1415867",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1091237",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "leishmaniasis"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1093561",
+      "title": "Conocimientos y prácticas en prevención de dengue en ciudad afectada por epidemia del dengue posfenómeno de El Niño Costero, Perú, 2018 / Knowledge and practices regarding dengue prevention in a Peruvian city affected by a dengue epidemic following the 2018 Coastal Child",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Stefany Niño-Effio, Brenda",
+        "Yong-Cadena, Hugo Alberto",
+        "Díaz-Vélez, Cristian"
+      ],
+      "journal": "Rev. cuba. med. trop ; 71(2), mayo.-ago. 2019. tab, graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1093561",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1093561",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-984629",
+      "title": "Perfil clínico, epidemiológico y geográfico de casos de dengue durante el fenómeno El Niño Costero 2017, Lambayeque-Perú / Clinical, epidemiological and geographic profile of dengue cases during El Niño Costero Phenomenon 2017, Lambayeque-Perú",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Silva, José O",
+        "Gomes, Pedro",
+        "Gonçalves, David",
+        "Viana, Charlene",
+        "Nogueira, Fernanda",
+        "Goulart, André",
+        "Leão, Pedro",
+        "Mota, Maria José",
+        "Peixoto, Palmira",
+        "Rodrigues, António Mesquita",
+        "Martins, Sandra F"
+      ],
+      "journal": "J. coloproctol. (Rio J., Impr.) ; 39(1): 48-55, Jan.-Mar. 2019. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-984629",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1004125",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-766392",
+      "title": "Sazonalidade nas notificações de dengue das capitais da Amazônia e os impactos do El Niño/La Niña / Seasonality of dengue reporting in state capitals in the Brazilian Amazon and impacts of El Niño/La Niña / Estacionalidad en las notificaciones de dengue de las capitales de la Amazonia y los impactos de El Niño/La Niña",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Ji-hee HAN",
+        "Yoon-ha OH",
+        "Sunny HAM"
+      ],
+      "journal": "Journal of the Korean Dietetic Association ; : 165-177, 2019.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-766392",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1039426",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "La Niña"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "La Niña"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1120224",
+      "title": "Plan de contingencia del Ministerio de Salud frente a los efectos de las lluvias y fenómeno El Niño, 2018 - 2019: Documento técnico / Contingency Plan of the Ministry of Health in the face of the effects of the rains and the El Niño Phenomenon, 2018 - 2019: Technical document",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Rahayu, Agustina",
+        "Keliat, Budi Anna",
+        "Mustikasati, Mustikasari",
+        "Erawati, Erna"
+      ],
+      "journal": "Online braz. j. nurs. (Online) ; 17(4), dez. 2018. ilus, tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1120224",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-970184",
+      "health_topics": [
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "health",
+          "salud"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-887200",
+      "title": "Perfil clínico, epidemiológico del brote epidémico de dengue durante El Fenómeno el Niño Costero 2017, Red Asistencial Piura, Perú / Clinical, epidemiological of the epidemic outbreak of dengue during the Phenomenon Niño Costero 2017, Red Asistencial de Piura, Peru",
+      "year": 2085,
+      "publication_date": "2085",
+      "authors": [
+        "Tas, Betul",
+        "Kulacaoglu, Filiz",
+        "Belli, Hasan",
+        "Altuntas, Murat"
+      ],
+      "journal": "An. bras. dermatol ; 93(2): 185-190, Mar.-Apr. 2018. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-887200",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1051742",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "epidemic",
+          "outbreak"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1601989",
+      "title": "Incidencia de dengue y su relación con el índice oceánico de El Niño, como variable sensible para anticipar brotes en la región Caribe colombiana / Dengue incidence and its relationship with El Niño oceanic index, as a sensitive variable to anticipate outbreaks in the Colombian Caribbean region",
+      "year": 2025,
+      "publication_date": "2025",
+      "authors": [
+        "Silva, Caroline Bessa da",
+        "Abreu, Victórya Suéllen Maciel",
+        "Costa, Douglas de Araújo",
+        "Viana, Luisa Gomes",
+        "Aquino, Priscila de Souza",
+        "Dalcin, Camila Biazus",
+        "Pinheiro, Ana Karina Bezerra",
+        "Caldas, Arlene de Jesus Mendes"
+      ],
+      "journal": "Rev. Bras. Enferm. (Online);78(2), 2025. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1601989",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1647351",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "outbreaks"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1376067",
+      "title": "Impacts of El Niño Southern Oscillation on the dengue transmission dynamics in the Metropolitan Region of Recife, Brazil",
+      "year": 2022,
+      "publication_date": "2022",
+      "authors": [
+        "Gallardo Vergara, René",
+        "Arriagada Burgos, Catalina"
+      ],
+      "journal": "Psicol. USP ; 33, 2022.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1376067",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1387545",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1136497",
+      "title": "Effects of El Niño-Southern Oscillation on human visceral leishmaniasis in the Brazilian State of Mato Grosso do Sul",
+      "year": 2020,
+      "publication_date": "2020",
+      "authors": [
+        "Barra, Brígida Gabriele Albuquerque",
+        "Gusmão, Úrsula Maria de Araújo Silva",
+        "Araújo, Ana Nery Barbosa de"
+      ],
+      "journal": "Rev. CEFAC ; 22(4), 2020. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1136497",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1091237",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "leishmaniasis"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1053359",
+      "title": "Conocimientos y prácticas en prevención de dengue en ciudad afectada por epidemia del dengue posfenómeno de El Niño Costero, Perú, 2018 / Knowledge and practices regarding dengue prevention in a Peruvian city affected by a dengue epidemic following the 2018 Coastal Child",
+      "year": 2019,
+      "publication_date": "2019",
+      "authors": [
+        "Delgado-Floody, Pedro",
+        "Caamaño-Navarrete, Felipe",
+        "Jerez-Mayorga, Daniel",
+        "Cofré-Lizama, Alfonso"
+      ],
+      "journal": "Arch. latinoam. nutr ; 69(3): 174-181, sept. 2019. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1053359",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1093561",
+      "health_topics": [
+        "Vector-borne diseases",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-989530",
+      "title": "Perfil clínico, epidemiológico y geográfico de casos de dengue durante el fenómeno El Niño Costero 2017, Lambayeque-Perú / Clinical, epidemiological and geographic profile of dengue cases during El Niño Costero Phenomenon 2017, Lambayeque-Perú",
+      "year": 2019,
+      "publication_date": "2019",
+      "authors": [
+        "Palma, Pamella Valente",
+        "Leite, Isabel Cristina Gonçalves",
+        "Greco, Rosangela Maria"
+      ],
+      "journal": "Cad. saúde colet., (Rio J.) ; 27(1): 100-107, jan.-mar. 2019. tab",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-989530",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1004125",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1356585",
+      "title": "Impacts of El Niño Southern Oscillation on the dengue transmission dynamics in the Metropolitan Region of Recife, Brazil",
+      "year": 2013,
+      "publication_date": "2013",
+      "authors": [
+        "Sousa, Renan Silva de",
+        "Oliveira Filho, Pedro de",
+        "Araújo, Jônatas Barros",
+        "Vieira, Dandara Virgínia Machado"
+      ],
+      "journal": "Psicol. ciênc. prof ; 42, 2022.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1356585",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1387545",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1507498",
+      "title": "Sazonalidade nas notificações de dengue das capitais da Amazônia e os impactos do El Niño/La Niña / Seasonality of dengue reporting in state capitals in the Brazilian Amazon and impacts of El Niño/La Niña / Estacionalidad en las notificaciones de dengue de las capitales de la Amazonia y los impactos de El Niño/La Niña",
+      "year": 2019,
+      "publication_date": "2019",
+      "authors": [
+        "Lobo-Segura, Jorge Arturo"
+      ],
+      "journal": "Rev. biol. trop ; 67(2)abr. 2019.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1507498",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1039426",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "La Niña"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "La Niña"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:biblio-1093944",
+      "title": "Fenómeno ENOS y el dengue, Regiones Pacífico Central y Huetar Atlántico, Costa Rica, 1990 a 2011 / ENSO and Dengue, in the Pacifico Central and Huetar Atlántico Regions, Costa Rica, 1990 to 2011",
+      "year": 2017,
+      "publication_date": "2017",
+      "authors": [
+        "Arias-Pérez, Jose",
+        "Coronado Hernández, Jairo",
+        "Perdomo Charry, Geovanny"
+      ],
+      "journal": "Rev. lasallista investig ; 14(2): 83-91, jul.-dic. 2017. tab, graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "biblio-1093944",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/biblio-1507070",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-778917",
+      "title": "Fenómeno el niño y desastres naturales: intervenciones en salud pública para la preparación y respuesta / El niño phenomenon and natural disasters: public health interventions for disaster preparedness and response",
+      "year": 2016,
+      "publication_date": "2016",
+      "authors": [
+        "MÁS BERMEJO, PEDRO"
+      ],
+      "journal": "Rev. cuba. salud pública ; 42(2), abr.-jun. 2016.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-778917",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-795386",
+      "health_topics": [
+        "General human health"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "public health",
+          "health",
+          "salud"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-795434",
+      "title": "Influencia del evento climático El Niño sobre la dinámica de transmisión de dengue en Medellín, Antioquia, Colombia / Influence of the El Niño climatic event on dengue transmission dynamics in Medellín, Antioquia, Colombia",
+      "year": 2012,
+      "publication_date": "2012",
+      "authors": [
+        "Britto Rodrigues, Ana Paula",
+        "Caldas, Heloisa"
+      ],
+      "journal": "Affectio Soc. (Medellin) ; 9(17): 49-59, Diciembre 30, 2012.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-795434",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-659352",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-503689",
+      "title": "Assessing the roles of temperature, precipitation, and enso in dengue re-emergence on the Texas-Mexico border region / Evaluación del clima y del ENSO en la reemergencia del dengue en la frontera Texas-México",
+      "year": 2008,
+      "publication_date": "2008",
+      "authors": [
+        "Cáceres G, José Luis"
+      ],
+      "journal": "Bol. malariol. salud ambient ; 48(1): 83-90, ene.-jul. 2008. tab, graf",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-503689",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-483166",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "ENSO"
+        ],
+        "health_title_matches": [
+          "dengue"
+        ]
+      }
+    },
+    {
+      "id": "gim:wpr-280083",
+      "title": "Análisis de la epidemia de muertes infantiles en Talara durante el Fenómeno El Niño de 1997-1998: ¿estamos preparados para enfrentar otra? / Analysis of children's deaths epidemic in Talara during the 1997-1998 El Niño Phenomenon: ¿are we prepared to face another one?",
+      "year": 2008,
+      "publication_date": "2008",
+      "authors": [
+        "Xu-gui CHEN",
+        "Miao-nin GU",
+        "Zhuo-qiang WANG"
+      ],
+      "journal": "Journal of Southern Medical University ; (12): 846-848, 2008.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "wpr-280083",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-499675",
+      "health_topics": [
+        "Mortality, morbidity & healthcare",
+        "Infectious diseases"
+      ],
+      "enso_phases": [
+        "El Niño"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño"
+        ],
+        "health_title_matches": [
+          "deaths",
+          "epidemic"
+        ]
+      }
+    },
+    {
+      "id": "gim:lil-523593",
+      "title": "Impacto de los eventos de El Niño Southern Oscillation (ENSO) sobre la leishmaniosis cutánea en Sucre, Venezuela, a través del uso de información satelital, 1994-2003 / Impact of El Niño Southern Oscillation (ENSO) events on cutaneous leishmaniasis in Sucre, Venezuela, trough the use of satellital data. 1994-2003",
+      "year": 2006,
+      "publication_date": "2006",
+      "authors": [
+        "Ferreira, Cláudia Passos"
+      ],
+      "journal": "Rio de Janeiro; s.n; 2006. 152 p.",
+      "doi": "",
+      "pmid": "",
+      "openalex_id": "",
+      "embase_id": "",
+      "gim_id": "lil-523593",
+      "abstract": "",
+      "cited_by_count": 0,
+      "is_oa": false,
+      "oa_url": "",
+      "landing_page_url": "https://pesquisa.bvsalud.org/gim/resource/en/lil-477927",
+      "health_topics": [
+        "Vector-borne diseases"
+      ],
+      "enso_phases": [
+        "El Niño",
+        "ENSO"
+      ],
+      "source_databases": [
+        "Global Index Medicus"
+      ],
+      "gim_indexes": [
+        "LILACS"
+      ],
+      "type": "article",
+      "affiliation_countries": [],
+      "inclusion": {
+        "criterion": "enso_health_title_plus_false_positive_exclusions",
+        "tier": "included_direct",
+        "reason_code": "specific_health_title_signal",
+        "reason": "Title links ENSO with a specific human-health disease or outcome signal and no exclusion rule was triggered.",
+        "enso_title_matches": [
+          "El Niño",
+          "ENSO",
+          "El Niño-Southern Oscillation"
+        ],
+        "health_title_matches": [
+          "leishmaniasis"
+        ]
+      }
+    }
+  ]
+}
