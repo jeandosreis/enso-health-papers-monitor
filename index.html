@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Continuously updated scientific literature on El Niño, La Niña, ENSO and human health." />
+  <meta name="description" content="Continuously updated scientific literature connecting ENSO, El Niño, La Niña and related climate indicators with human health, health outcomes and health-relevant exposure pathways." />
   <meta name="theme-color" content="#7b0a06" />
   <title>ENSO & Saúde | Monitor de Literatura Científica</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -177,6 +177,174 @@
     }
     .hero-credit a:hover { color: var(--accent); }
 
+
+
+    /* Search-strategy transparency panels */
+    .method-version {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .03em;
+    }
+
+    .method-version strong { color: var(--text); }
+
+    .strategy-source-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .strategy-source-card {
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .strategy-source-card h4 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 0 0 7px;
+      font-size: 14px;
+    }
+
+    .strategy-source-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .source-status {
+      flex: 0 0 auto;
+      padding: 3px 7px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    .source-status.primary { color: var(--accent); border-color: color-mix(in srgb, var(--accent) 35%, var(--line)); }
+
+    .vocab-summary {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      margin: 14px 0 16px;
+    }
+
+    .vocab-summary > div {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 11px;
+      background: var(--surface);
+    }
+
+    .vocab-summary strong {
+      display: block;
+      font-size: 20px;
+      line-height: 1.1;
+    }
+
+    .vocab-summary small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.35;
+    }
+
+    .vocab-section-title {
+      margin: 18px 0 8px;
+      font-size: 13px;
+    }
+
+    .term-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .term-chip {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      padding: 5px 8px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 10px;
+      line-height: 1.25;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+
+    .vocab-groups {
+      display: grid;
+      gap: 7px;
+    }
+
+    .vocab-group {
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .vocab-group > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .vocab-group > summary small {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 9px;
+      font-weight: 700;
+    }
+
+    .vocab-group .term-cloud {
+      padding: 0 12px 12px;
+    }
+
+    .strategy-note {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    @media (max-width: 700px) {
+      .strategy-source-grid,
+      .vocab-summary { grid-template-columns: 1fr; }
+      .vocab-group > summary { align-items: flex-start; }
+    }
+
     @media (max-width: 700px) {
       .brand-logo { width: 142px; }
       .header-inner { gap: 10px; }
@@ -217,7 +385,8 @@
           <h1 data-i18n-html="heroTitle">Literatura científica sobre <span>ENSO</span> e saúde humana</h1>
           <p class="hero-text" data-i18n="heroText">
             Um catálogo continuamente atualizado e de alta precisão de publicações científicas cujos títulos
-            conectam explicitamente El Niño, La Niña ou ENSO à saúde humana e a desfechos de saúde.
+            conectam explicitamente ENSO, El Niño, La Niña ou indicadores associados à saúde humana, a desfechos de saúde
+            ou a vias de exposição relevantes à saúde.
           </p>
           <div class="hero-credit">
             <p><span data-i18n="initiativePrefix">Uma iniciativa da plataforma</span> <a href="https://cidacs.bahia.fiocruz.br/cidacs-clima/" target="_blank" rel="noopener noreferrer">CIDACS Clima</a>.</p>
@@ -232,7 +401,7 @@
           <div class="pulse-dot"></div>
           <div>
             <strong data-i18n="automaticallyUpdated">Atualização automática</strong>
-            <p data-i18n="sourceDescription">Descoberta baseada em títulos via OpenAlex e PubMed, com enriquecimento de metadados DOI pelo Crossref.</p>
+            <p data-i18n="sourceDescription">Descoberta via OpenAlex, PubMed e Global Index Medicus, com suporte opcional ao Embase e enriquecimento de metadados DOI pelo Crossref. A inclusão final permanece title-first.</p>
             <p id="updatedAt" class="muted">Base ainda não atualizada.</p>
           </div>
         </aside>
@@ -270,7 +439,7 @@
           <div>
             <p class="eyebrow" data-i18n="searchEyebrow">PESQUISE AS EVIDÊNCIAS</p>
             <h2 data-i18n="scientificPublications">Publicações científicas</h2>
-            <p data-i18n="publicationIntro">Somente publicações com um termo de ENSO e um termo predefinido de saúde no título são incluídas. A busca local considera título, autores, resumo, periódico, DOI e temas.</p>
+            <p data-i18n="publicationIntro">Somente publicações com um termo ENSO/indicador e um termo predefinido de saúde, vetor, hospedeiro ou exposição no título são incluídas. A busca local do site considera título, autores, resumo, periódico, DOI e temas.</p>
           </div>
           <div class="result-counter"><strong id="resultCount">0</strong><span data-i18n="results">resultados</span></div>
         </div>
@@ -389,14 +558,14 @@
             <span>01</span>
             <div>
               <h3 data-i18n="discover">Descobrir</h3>
-              <p data-i18n="discoverDesc">OpenAlex e PubMed são consultados apenas por títulos que contenham simultaneamente um termo ENSO e um termo predefinido de saúde humana.</p>
+              <p data-i18n="discoverDesc">OpenAlex e PubMed usam descoberta title-first com vocabulário ampliado. O Global Index Medicus usa descoberta sensível por texto/DeCS antes da triagem local; o Embase é consultado quando há autorização institucional.</p>
             </div>
           </article>
           <article class="method-card">
             <span>02</span>
             <div>
               <h3 data-i18n="screen">Triar</h3>
-              <p data-i18n="screenDesc">Uma triagem local rigorosa do título verifica independentemente os dois grupos conceituais antes que um registro possa entrar no catálogo.</p>
+              <p data-i18n="screenDesc">Todos os candidatos passam pelo mesmo filtro local: o título precisa conter ≥1 termo ENSO/indicador e ≥1 termo de saúde/exposição. Regras adicionais removem falsos positivos claros.</p>
             </div>
           </article>
           <article class="method-card">
@@ -410,7 +579,7 @@
             <span>04</span>
             <div>
               <h3 data-i18n="enrich">Enriquecer e classificar</h3>
-              <p data-i18n="enrichDesc">O Crossref complementa metadados DOI ausentes, enquanto correspondências transparentes no título atribuem temas de saúde e rótulos ENSO.</p>
+              <p data-i18n="enrichDesc">O Crossref complementa metadados DOI quando necessário, enquanto correspondências transparentes no título registram os termos ENSO, temas de saúde/exposição e o nível de relação identificado.</p>
             </div>
           </article>
           <article class="method-card">
@@ -422,19 +591,646 @@
           </article>
         </div>
 
+        <div class="method-version"><span data-i18n="strategyVersionLabel">Estratégia de busca</span> <strong>v1.7.1</strong></div>
+
+        <details class="method-details">
+          <summary data-i18n="sourcesDetails">Bases bibliográficas e integração</summary>
+          <div>
+            <p data-i18n="sourcesIntro">O monitor integra fontes com coberturas complementares. A forma de descoberta varia conforme a base, mas todos os registros passam pelo mesmo critério local de inclusão orientado pelo título.</p>
+            <div class="strategy-source-grid">
+              <article class="strategy-source-card">
+                <h4>OpenAlex <span class="source-status primary" data-i18n="statusPrimary">principal</span></h4>
+                <p data-i18n="openAlexSourceDesc">Descoberta automática em títulos com o vocabulário ENSO × saúde/exposição; também fornece metadados bibliográficos, citações e informação de acesso aberto quando disponível.</p>
+              </article>
+              <article class="strategy-source-card">
+                <h4>PubMed <span class="source-status primary" data-i18n="statusPrimary">principal</span></h4>
+                <p data-i18n="pubMedSourceDesc">Descoberta automática no campo de título, complementando a cobertura biomédica e permitindo deduplicação por PMID quando disponível.</p>
+              </article>
+              <article class="strategy-source-card">
+                <h4>Global Index Medicus <span class="source-status primary" data-i18n="statusIntegrated">integrado</span></h4>
+                <p data-i18n="gimSourceDesc">Descoberta sensível por texto livre e DeCS/descritores, seguida por triagem title-first local. A integração amplia a literatura regional, incluindo índices como AIM, IMEMR, IMSEAR, LILACS e WPRIM; sobreposições com MEDLINE/PubMed são deduplicadas.</p>
+              </article>
+              <article class="strategy-source-card">
+                <h4>Embase <span class="source-status" data-i18n="statusOptional">opcional</span></h4>
+                <p data-i18n="embaseSourceDesc">Suporte programado no coletor. A consulta é ativada quando existem credenciais e autorização institucional válidas; se a base não estiver autorizada, a atualização continua com as demais fontes.</p>
+              </article>
+              <article class="strategy-source-card">
+                <h4>Crossref <span class="source-status" data-i18n="statusEnrichment">enriquecimento</span></h4>
+                <p data-i18n="crossrefSourceDesc">Não é usado como fonte principal de descoberta. É consultado para complementar metadados associados a DOI quando necessário.</p>
+              </article>
+            </div>
+          </div>
+        </details>
+
+        <details class="method-details">
+          <summary data-i18n="vocabDetails">Termos e estratégia de busca</summary>
+          <div>
+            <p data-i18n="vocabIntro">O vocabulário foi ampliado porque a inclusão final é title-first. Isso permite aumentar a sensibilidade da descoberta sem aceitar automaticamente resultados que não apresentem a relação ENSO–saúde no próprio título.</p>
+            <div class="vocab-summary">
+              <div><strong>23</strong><small data-i18n="ensoExpressionCount">expressões ENSO/indicadores configuradas</small></div>
+              <div><strong>18</strong><small data-i18n="healthGroupCount">grupos temáticos de saúde/exposição</small></div>
+              <div><strong>276</strong><small data-i18n="healthTermCount">termos operacionais de saúde/exposição em inglês</small></div>
+            </div>
+
+            <h4 class="vocab-section-title" data-i18n="ensoVocabTitle">Termos ENSO e indicadores aceitos no título</h4>
+            <div class="term-cloud"><code class="term-chip">El Niño</code>
+<code class="term-chip">El Nino</code>
+<code class="term-chip">La Niña</code>
+<code class="term-chip">La Nina</code>
+<code class="term-chip">ENSO</code>
+<code class="term-chip">El Niño-Southern Oscillation</code>
+<code class="term-chip">El Nino-Southern Oscillation</code>
+<code class="term-chip">El Niño Southern Oscillation</code>
+<code class="term-chip">El Nino Southern Oscillation</code>
+<code class="term-chip">Southern Oscillation Index</code>
+<code class="term-chip">SOI</code>
+<code class="term-chip">Oceanic Niño Index</code>
+<code class="term-chip">Oceanic Nino Index</code>
+<code class="term-chip">ONI</code>
+<code class="term-chip">Niño 3.4</code>
+<code class="term-chip">Nino 3.4</code>
+<code class="term-chip">Niño-3.4</code>
+<code class="term-chip">Nino-3.4</code>
+<code class="term-chip">Multivariate ENSO Index</code>
+<code class="term-chip">MEI</code>
+<code class="term-chip">El Niño Modoki</code>
+<code class="term-chip">El Nino Modoki</code>
+<code class="term-chip">ENSO Modoki</code></div>
+            <p class="strategy-note" data-i18n="acronymRuleDesc">As siglas SOI, ONI e MEI são tratadas com proteção adicional de capitalização/contexto para reduzir correspondências lexicais ambíguas.</p>
+
+            <h4 class="vocab-section-title" data-i18n="healthVocabTitle">Vocabulário de saúde, vetores, hospedeiros e exposições</h4>
+            <div class="vocab-groups">
+<details class="vocab-group">
+                  <summary><span>Vector-borne diseases</span><small>28 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">dengue</code>
+<code class="term-chip">malaria</code>
+<code class="term-chip">zika</code>
+<code class="term-chip">chikungunya</code>
+<code class="term-chip">yellow fever</code>
+<code class="term-chip">leishmaniasis</code>
+<code class="term-chip">leptospirosis</code>
+<code class="term-chip">hantavirus</code>
+<code class="term-chip">hantavirus pulmonary syndrome</code>
+<code class="term-chip">rift valley fever</code>
+<code class="term-chip">west nile virus</code>
+<code class="term-chip">ross river virus</code>
+<code class="term-chip">japanese encephalitis</code>
+<code class="term-chip">vector-borne disease</code>
+<code class="term-chip">vector-borne diseases</code>
+<code class="term-chip">mosquito-borne disease</code>
+<code class="term-chip">mosquito-borne diseases</code>
+<code class="term-chip">arboviral disease</code>
+<code class="term-chip">arboviral diseases</code>
+<code class="term-chip">oropouche</code>
+<code class="term-chip">oropouche virus</code>
+<code class="term-chip">mayaro</code>
+<code class="term-chip">mayaro virus</code>
+<code class="term-chip">schistosomiasis</code>
+<code class="term-chip">plague</code>
+<code class="term-chip">yersinia pestis</code>
+<code class="term-chip">leptospira</code>
+<code class="term-chip">plasmodium</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Waterborne &amp; enteric diseases</span><small>31 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">cholera</code>
+<code class="term-chip">diarrhea</code>
+<code class="term-chip">diarrhoea</code>
+<code class="term-chip">diarrheal disease</code>
+<code class="term-chip">diarrheal diseases</code>
+<code class="term-chip">diarrhoeal disease</code>
+<code class="term-chip">diarrhoeal diseases</code>
+<code class="term-chip">gastroenteritis</code>
+<code class="term-chip">waterborne disease</code>
+<code class="term-chip">waterborne diseases</code>
+<code class="term-chip">enteric disease</code>
+<code class="term-chip">enteric diseases</code>
+<code class="term-chip">enteric infection</code>
+<code class="term-chip">enteric infections</code>
+<code class="term-chip">cryptosporidiosis</code>
+<code class="term-chip">rotavirus</code>
+<code class="term-chip">norovirus</code>
+<code class="term-chip">shigella</code>
+<code class="term-chip">salmonella</code>
+<code class="term-chip">campylobacter</code>
+<code class="term-chip">e. coli</code>
+<code class="term-chip">escherichia coli</code>
+<code class="term-chip">giardiasis</code>
+<code class="term-chip">giardia</code>
+<code class="term-chip">typhoid</code>
+<code class="term-chip">typhoid fever</code>
+<code class="term-chip">cryptosporidium</code>
+<code class="term-chip">vibrio</code>
+<code class="term-chip">vibrio cholerae</code>
+<code class="term-chip">hepatitis a</code>
+<code class="term-chip">salmonellosis</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Respiratory health</span><small>18 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">respiratory disease</code>
+<code class="term-chip">respiratory diseases</code>
+<code class="term-chip">respiratory infection</code>
+<code class="term-chip">respiratory infections</code>
+<code class="term-chip">respiratory mortality</code>
+<code class="term-chip">asthma</code>
+<code class="term-chip">pneumonia</code>
+<code class="term-chip">influenza</code>
+<code class="term-chip">lung disease</code>
+<code class="term-chip">lung diseases</code>
+<code class="term-chip">copd</code>
+<code class="term-chip">chronic obstructive pulmonary disease</code>
+<code class="term-chip">bronchitis</code>
+<code class="term-chip">acute respiratory infection</code>
+<code class="term-chip">acute respiratory infections</code>
+<code class="term-chip">ari</code>
+<code class="term-chip">respiratory admission</code>
+<code class="term-chip">respiratory admissions</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Cardiovascular health</span><small>13 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">cardiovascular disease</code>
+<code class="term-chip">cardiovascular diseases</code>
+<code class="term-chip">cardiovascular mortality</code>
+<code class="term-chip">heart disease</code>
+<code class="term-chip">heart diseases</code>
+<code class="term-chip">coronary heart disease</code>
+<code class="term-chip">stroke</code>
+<code class="term-chip">ischemic heart disease</code>
+<code class="term-chip">ischaemic heart disease</code>
+<code class="term-chip">cardiac arrest</code>
+<code class="term-chip">myocardial infarction</code>
+<code class="term-chip">heart attack</code>
+<code class="term-chip">heart attacks</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Mortality, morbidity &amp; healthcare</span><small>20 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">mortality</code>
+<code class="term-chip">morbidity</code>
+<code class="term-chip">death</code>
+<code class="term-chip">deaths</code>
+<code class="term-chip">excess mortality</code>
+<code class="term-chip">all-cause mortality</code>
+<code class="term-chip">hospitalization</code>
+<code class="term-chip">hospitalizations</code>
+<code class="term-chip">hospitalisation</code>
+<code class="term-chip">hospitalisations</code>
+<code class="term-chip">hospital admission</code>
+<code class="term-chip">hospital admissions</code>
+<code class="term-chip">emergency department visit</code>
+<code class="term-chip">emergency department visits</code>
+<code class="term-chip">injury</code>
+<code class="term-chip">injuries</code>
+<code class="term-chip">drowning</code>
+<code class="term-chip">drownings</code>
+<code class="term-chip">displacement</code>
+<code class="term-chip">forced displacement</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Maternal, child &amp; reproductive health</span><small>29 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">maternal health</code>
+<code class="term-chip">maternal mortality</code>
+<code class="term-chip">pregnancy</code>
+<code class="term-chip">pregnant women</code>
+<code class="term-chip">pregnancy outcome</code>
+<code class="term-chip">pregnancy outcomes</code>
+<code class="term-chip">birth outcome</code>
+<code class="term-chip">birth outcomes</code>
+<code class="term-chip">birth weight</code>
+<code class="term-chip">low birth weight</code>
+<code class="term-chip">preterm birth</code>
+<code class="term-chip">preterm births</code>
+<code class="term-chip">stillbirth</code>
+<code class="term-chip">stillbirths</code>
+<code class="term-chip">child health</code>
+<code class="term-chip">infant mortality</code>
+<code class="term-chip">neonatal mortality</code>
+<code class="term-chip">neonatal health</code>
+<code class="term-chip">reproductive health</code>
+<code class="term-chip">child mortality</code>
+<code class="term-chip">under-five mortality</code>
+<code class="term-chip">under 5 mortality</code>
+<code class="term-chip">maternal morbidity</code>
+<code class="term-chip">miscarriage</code>
+<code class="term-chip">miscarriages</code>
+<code class="term-chip">spontaneous abortion</code>
+<code class="term-chip">spontaneous abortions</code>
+<code class="term-chip">premature birth</code>
+<code class="term-chip">premature births</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Nutrition &amp; food security</span><small>13 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">nutrition</code>
+<code class="term-chip">nutritional status</code>
+<code class="term-chip">malnutrition</code>
+<code class="term-chip">undernutrition</code>
+<code class="term-chip">stunting</code>
+<code class="term-chip">wasting</code>
+<code class="term-chip">food security</code>
+<code class="term-chip">food insecurity</code>
+<code class="term-chip">famine</code>
+<code class="term-chip">acute malnutrition</code>
+<code class="term-chip">severe acute malnutrition</code>
+<code class="term-chip">anemia</code>
+<code class="term-chip">anaemia</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Mental health</span><small>16 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">mental health</code>
+<code class="term-chip">depression</code>
+<code class="term-chip">anxiety</code>
+<code class="term-chip">suicide</code>
+<code class="term-chip">suicides</code>
+<code class="term-chip">psychiatric disorder</code>
+<code class="term-chip">psychiatric disorders</code>
+<code class="term-chip">psychological distress</code>
+<code class="term-chip">post-traumatic stress disorder</code>
+<code class="term-chip">posttraumatic stress disorder</code>
+<code class="term-chip">ptsd</code>
+<code class="term-chip">sleep disturbance</code>
+<code class="term-chip">sleep disturbances</code>
+<code class="term-chip">sleep disorder</code>
+<code class="term-chip">sleep disorders</code>
+<code class="term-chip">violence</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Heat-related health</span><small>16 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">heat-related illness</code>
+<code class="term-chip">heat-related illnesses</code>
+<code class="term-chip">heat illness</code>
+<code class="term-chip">heat illnesses</code>
+<code class="term-chip">heatstroke</code>
+<code class="term-chip">heat stroke</code>
+<code class="term-chip">heat-related mortality</code>
+<code class="term-chip">heat mortality</code>
+<code class="term-chip">heat-related morbidity</code>
+<code class="term-chip">thermal discomfort</code>
+<code class="term-chip">heat-related death</code>
+<code class="term-chip">heat-related deaths</code>
+<code class="term-chip">heat stress</code>
+<code class="term-chip">heat exhaustion</code>
+<code class="term-chip">dehydration</code>
+<code class="term-chip">occupational heat stress</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Infectious diseases</span><small>21 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">infectious disease</code>
+<code class="term-chip">infectious diseases</code>
+<code class="term-chip">communicable disease</code>
+<code class="term-chip">communicable diseases</code>
+<code class="term-chip">infection incidence</code>
+<code class="term-chip">infection risk</code>
+<code class="term-chip">disease incidence</code>
+<code class="term-chip">disease prevalence</code>
+<code class="term-chip">disease transmission</code>
+<code class="term-chip">epidemic</code>
+<code class="term-chip">epidemics</code>
+<code class="term-chip">outbreak</code>
+<code class="term-chip">outbreaks</code>
+<code class="term-chip">meningitis</code>
+<code class="term-chip">covid-19</code>
+<code class="term-chip">covid 19</code>
+<code class="term-chip">sars-cov-2</code>
+<code class="term-chip">sars cov 2</code>
+<code class="term-chip">hand foot and mouth disease</code>
+<code class="term-chip">hand-foot-and-mouth disease</code>
+<code class="term-chip">hfmd</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Other chronic diseases</span><small>7 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">kidney disease</code>
+<code class="term-chip">kidney diseases</code>
+<code class="term-chip">chronic kidney disease</code>
+<code class="term-chip">renal disease</code>
+<code class="term-chip">renal diseases</code>
+<code class="term-chip">diabetes</code>
+<code class="term-chip">diabetes mellitus</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>General human health</span><small>10 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">human health</code>
+<code class="term-chip">public health</code>
+<code class="term-chip">health</code>
+<code class="term-chip">health outcome</code>
+<code class="term-chip">health outcomes</code>
+<code class="term-chip">health impact</code>
+<code class="term-chip">health impacts</code>
+<code class="term-chip">health risk</code>
+<code class="term-chip">health risks</code>
+<code class="term-chip">disease burden</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Vectors &amp; hosts</span><small>24 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">aedes</code>
+<code class="term-chip">aedes aegypti</code>
+<code class="term-chip">aedes albopictus</code>
+<code class="term-chip">anopheles</code>
+<code class="term-chip">culex</code>
+<code class="term-chip">mosquito abundance</code>
+<code class="term-chip">mosquito density</code>
+<code class="term-chip">vector abundance</code>
+<code class="term-chip">vector density</code>
+<code class="term-chip">vectorial capacity</code>
+<code class="term-chip">vector competence</code>
+<code class="term-chip">rodent</code>
+<code class="term-chip">rodents</code>
+<code class="term-chip">sand fly</code>
+<code class="term-chip">sand flies</code>
+<code class="term-chip">sandfly</code>
+<code class="term-chip">sandflies</code>
+<code class="term-chip">phlebotomus</code>
+<code class="term-chip">lutzomyia</code>
+<code class="term-chip">triatoma</code>
+<code class="term-chip">triatomine</code>
+<code class="term-chip">triatomines</code>
+<code class="term-chip">flea</code>
+<code class="term-chip">fleas</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Water, sanitation &amp; contamination</span><small>6 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">water-related disease</code>
+<code class="term-chip">water-related diseases</code>
+<code class="term-chip">water contamination</code>
+<code class="term-chip">drinking water safety</code>
+<code class="term-chip">sanitation</code>
+<code class="term-chip">water sanitation</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Air pollution, smoke &amp; fire exposure</span><small>10 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">wildfire smoke</code>
+<code class="term-chip">biomass burning</code>
+<code class="term-chip">air pollution</code>
+<code class="term-chip">particulate matter</code>
+<code class="term-chip">pm2.5</code>
+<code class="term-chip">pm 2.5</code>
+<code class="term-chip">fine particulate matter</code>
+<code class="term-chip">smoke haze</code>
+<code class="term-chip">haze</code>
+<code class="term-chip">smoke exposure</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Fungal diseases</span><small>5 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">coccidioidomycosis</code>
+<code class="term-chip">valley fever</code>
+<code class="term-chip">coccidioides</code>
+<code class="term-chip">fungal infection</code>
+<code class="term-chip">fungal infections</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Renal health</span><small>4 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">acute kidney injury</code>
+<code class="term-chip">aki</code>
+<code class="term-chip">renal failure</code>
+<code class="term-chip">kidney failure</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Occupational health</span><small>5 terms</small></summary>
+                  <div class="term-cloud"><code class="term-chip">occupational health</code>
+<code class="term-chip">outdoor worker</code>
+<code class="term-chip">outdoor workers</code>
+<code class="term-chip">worker health</code>
+<code class="term-chip">workers health</code></div>
+                </details>
+            </div>
+
+            <h4 class="vocab-section-title" data-i18n="gimVocabTitle">Global Index Medicus: vocabulário complementar</h4>
+            <p data-i18n="gimVocabIntro">Para descoberta no GIM, o coletor acrescenta expressões climáticas desambiguadas, o descritor DeCS de ENSO e aliases de saúde em português e espanhol. Esses termos ampliam somente a descoberta: a inclusão final continua exigindo a correspondência no título.</p>
+            <details class="vocab-group">
+              <summary><span data-i18n="gimExposureTerms">Expressões climáticas/ENSO usadas na descoberta GIM</span><small>34 terms</small></summary>
+              <div class="term-cloud"><code class="term-chip">El Niño Oscilación del Sur</code>
+<code class="term-chip">El Niño-Southern Oscillation</code>
+<code class="term-chip">El Nino-Southern Oscillation</code>
+<code class="term-chip">El Niño Southern Oscillation</code>
+<code class="term-chip">El Nino Southern Oscillation</code>
+<code class="term-chip">ENSO</code>
+<code class="term-chip">ENOS</code>
+<code class="term-chip">fenómeno El Niño</code>
+<code class="term-chip">fenomeno El Nino</code>
+<code class="term-chip">fenômeno El Niño</code>
+<code class="term-chip">corriente El Niño</code>
+<code class="term-chip">corriente del Niño</code>
+<code class="term-chip">evento El Niño</code>
+<code class="term-chip">evento El Nino</code>
+<code class="term-chip">Oceanic Niño Index</code>
+<code class="term-chip">Oceanic Nino Index</code>
+<code class="term-chip">Índice Niño Oceánico</code>
+<code class="term-chip">Indice Nino Oceanico</code>
+<code class="term-chip">Southern Oscillation Index</code>
+<code class="term-chip">índice de oscilación del sur</code>
+<code class="term-chip">indice de oscilacion del sur</code>
+<code class="term-chip">SOI</code>
+<code class="term-chip">ONI</code>
+<code class="term-chip">Niño 3.4</code>
+<code class="term-chip">Nino 3.4</code>
+<code class="term-chip">Niño 3</code>
+<code class="term-chip">Nino 3</code>
+<code class="term-chip">El Niño Modoki</code>
+<code class="term-chip">El Nino Modoki</code>
+<code class="term-chip">ENSO Modoki</code>
+<code class="term-chip">fenómeno La Niña</code>
+<code class="term-chip">fenomeno La Nina</code>
+<code class="term-chip">evento La Niña</code>
+<code class="term-chip">evento La Nina</code></div>
+            </details>
+            <div class="vocab-groups" style="margin-top:7px">
+<details class="vocab-group">
+                  <summary><span>General human health</span><small>14 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">saúde</code>
+<code class="term-chip">salud</code>
+<code class="term-chip">doença</code>
+<code class="term-chip">doenças</code>
+<code class="term-chip">enfermedad</code>
+<code class="term-chip">enfermedades</code>
+<code class="term-chip">mortalidade</code>
+<code class="term-chip">mortalidad</code>
+<code class="term-chip">morbidade</code>
+<code class="term-chip">morbilidad</code>
+<code class="term-chip">impacto na saúde</code>
+<code class="term-chip">impacto en la salud</code>
+<code class="term-chip">efeitos na saúde</code>
+<code class="term-chip">efectos en la salud</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Vector-borne diseases</span><small>9 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">malária</code>
+<code class="term-chip">leishmaniose</code>
+<code class="term-chip">leishmaniose visceral</code>
+<code class="term-chip">leishmaniasis visceral</code>
+<code class="term-chip">leptospirose</code>
+<code class="term-chip">febre amarela</code>
+<code class="term-chip">fiebre amarilla</code>
+<code class="term-chip">esquistossomose</code>
+<code class="term-chip">esquistosomiasis</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Waterborne &amp; enteric diseases</span><small>7 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">cólera</code>
+<code class="term-chip">diarreia</code>
+<code class="term-chip">diarrea</code>
+<code class="term-chip">gastroenterite</code>
+<code class="term-chip">gastroenteritis</code>
+<code class="term-chip">febre tifóide</code>
+<code class="term-chip">fiebre tifoidea</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Mental health</span><small>10 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">saúde mental</code>
+<code class="term-chip">salud mental</code>
+<code class="term-chip">depressão</code>
+<code class="term-chip">depresión</code>
+<code class="term-chip">ansiedade</code>
+<code class="term-chip">ansiedad</code>
+<code class="term-chip">suicídio</code>
+<code class="term-chip">suicidio</code>
+<code class="term-chip">estresse psicológico</code>
+<code class="term-chip">estrés psicológico</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Maternal, child &amp; reproductive health</span><small>10 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">saúde materna</code>
+<code class="term-chip">salud materna</code>
+<code class="term-chip">mortalidade infantil</code>
+<code class="term-chip">mortalidad infantil</code>
+<code class="term-chip">baixo peso ao nascer</code>
+<code class="term-chip">bajo peso al nacer</code>
+<code class="term-chip">parto prematuro</code>
+<code class="term-chip">parto pretérmino</code>
+<code class="term-chip">natimorto</code>
+<code class="term-chip">mortinato</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Mortality, morbidity &amp; healthcare</span><small>14 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">hospitalização</code>
+<code class="term-chip">hospitalización</code>
+<code class="term-chip">internação hospitalar</code>
+<code class="term-chip">ingreso hospitalario</code>
+<code class="term-chip">admissão hospitalar</code>
+<code class="term-chip">admisión hospitalaria</code>
+<code class="term-chip">lesão</code>
+<code class="term-chip">lesões</code>
+<code class="term-chip">lesión</code>
+<code class="term-chip">lesiones</code>
+<code class="term-chip">acidente</code>
+<code class="term-chip">acidentes</code>
+<code class="term-chip">accidente</code>
+<code class="term-chip">accidentes</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Nutrition &amp; food security</span><small>7 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">desnutrição</code>
+<code class="term-chip">desnutrición</code>
+<code class="term-chip">subnutrição</code>
+<code class="term-chip">subnutrición</code>
+<code class="term-chip">estado nutricional</code>
+<code class="term-chip">insegurança alimentar</code>
+<code class="term-chip">inseguridad alimentaria</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Cardiovascular health</span><small>6 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">doença cardiovascular</code>
+<code class="term-chip">enfermedad cardiovascular</code>
+<code class="term-chip">infarto do miocárdio</code>
+<code class="term-chip">infarto de miocardio</code>
+<code class="term-chip">acidente vascular cerebral</code>
+<code class="term-chip">accidente cerebrovascular</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Respiratory health</span><small>7 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">asma</code>
+<code class="term-chip">pneumonia</code>
+<code class="term-chip">bronquite</code>
+<code class="term-chip">bronquitis</code>
+<code class="term-chip">doença pulmonar obstrutiva crônica</code>
+<code class="term-chip">enfermedad pulmonar obstructiva crónica</code>
+<code class="term-chip">EPOC</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Heat-related health</span><small>5 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">estresse térmico</code>
+<code class="term-chip">estrés térmico</code>
+<code class="term-chip">golpe de calor</code>
+<code class="term-chip">exaustão pelo calor</code>
+<code class="term-chip">agotamiento por calor</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Renal health</span><small>6 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">lesão renal aguda</code>
+<code class="term-chip">lesión renal aguda</code>
+<code class="term-chip">insuficiência renal</code>
+<code class="term-chip">insuficiencia renal</code>
+<code class="term-chip">doença renal</code>
+<code class="term-chip">enfermedad renal</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Occupational health</span><small>6 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">estresse térmico ocupacional</code>
+<code class="term-chip">estrés térmico ocupacional</code>
+<code class="term-chip">saúde ocupacional</code>
+<code class="term-chip">salud ocupacional</code>
+<code class="term-chip">trabalhadores ao ar livre</code>
+<code class="term-chip">trabajadores al aire libre</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Vectors &amp; hosts</span><small>9 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">mosquito</code>
+<code class="term-chip">mosquitos</code>
+<code class="term-chip">vetor</code>
+<code class="term-chip">vetores</code>
+<code class="term-chip">vector</code>
+<code class="term-chip">vectores</code>
+<code class="term-chip">roedor</code>
+<code class="term-chip">roedores</code>
+<code class="term-chip">roedor(es)</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Water, sanitation &amp; contamination</span><small>6 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">saneamento</code>
+<code class="term-chip">saneamiento</code>
+<code class="term-chip">contaminação da água</code>
+<code class="term-chip">contaminación del agua</code>
+<code class="term-chip">água potável</code>
+<code class="term-chip">agua potable</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Air pollution, smoke &amp; fire exposure</span><small>9 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">poluição do ar</code>
+<code class="term-chip">contaminación del aire</code>
+<code class="term-chip">polución del aire</code>
+<code class="term-chip">fumaça</code>
+<code class="term-chip">humo</code>
+<code class="term-chip">incêndio florestal</code>
+<code class="term-chip">incendio forestal</code>
+<code class="term-chip">queima de biomassa</code>
+<code class="term-chip">quema de biomasa</code></div>
+                </details>
+<details class="vocab-group">
+                  <summary><span>Fungal diseases</span><small>4 aliases</small></summary>
+                  <div class="term-cloud"><code class="term-chip">infecção fúngica</code>
+<code class="term-chip">infección fúngica</code>
+<code class="term-chip">coccidioidomicose</code>
+<code class="term-chip">coccidioidomicosis</code></div>
+                </details>
+            </div>
+          </div>
+        </details>
+
         <details class="method-details">
           <summary data-i18n="scopeLimitations">Escopo e limitações da busca</summary>
           <div>
             <p data-i18n="scopeP1">
-              O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter
-              pelo menos um termo configurado para El Niño, La Niña ou ENSO e pelo menos um termo predefinido referente
-              à saúde humana, doença, mortalidade, morbidade, nutrição ou outro desfecho de saúde. A coocorrência apenas
-              no resumo, nas palavras-chave ou no texto completo não é suficiente para inclusão.
+              O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter pelo menos
+              um termo configurado de ENSO/indicador e pelo menos um termo predefinido de saúde ou de uma via de exposição relevante.
+              O vocabulário inclui desfechos clínicos e epidemiológicos, doenças, mortalidade e morbidade, além de vetores/hospedeiros
+              e exposições selecionadas, como Aedes, PM2.5, wildfire smoke e heat stress.
             </p>
             <p data-i18n="scopeP2">
-              Essa escolha favorece intencionalmente a precisão em detrimento da cobertura máxima. Trabalhos que estudem
-              uma relação ENSO–saúde, mas não expressem ambos os conceitos no título, podem não ser recuperados. O catálogo
-              apoia a descoberta e o monitoramento direcionado de evidências; ele não substitui um protocolo formal de revisão sistemática.
+              OpenAlex e PubMed fazem descoberta diretamente orientada pelo título. No Global Index Medicus, a descoberta é mais sensível
+              e pode usar texto/descritores, mas nenhum registro entra no catálogo se o título não passar pelo mesmo filtro local. Abstracts,
+              palavras-chave e descritores podem ajudar a encontrar candidatos, mas não substituem o requisito title-first de inclusão.
+            </p>
+            <p data-i18n="scopeP3">
+              O screening também remove falsos positivos claros, como “el niño/la niña” usados no sentido de criança, mortalidade não humana,
+              usos não epidemiológicos de “outbreak” e correções/erratas. Relações diretas e relações amplas por vetores, hospedeiros ou vias de
+              exposição podem permanecer no catálogo quando a conexão está explícita no título.
             </p>
           </div>
         </details>
@@ -442,6 +1238,8 @@
         <div class="source-links">
           <a href="https://openalex.org/" target="_blank" rel="noopener noreferrer">OpenAlex ↗</a>
           <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">PubMed ↗</a>
+          <a href="https://www.globalindexmedicus.net/" target="_blank" rel="noopener noreferrer">Global Index Medicus ↗</a>
+          <a href="https://www.embase.com/" target="_blank" rel="noopener noreferrer">Embase ↗</a>
           <a href="https://www.crossref.org/" target="_blank" rel="noopener noreferrer">Crossref ↗</a>
         </div>
       </div>
@@ -563,42 +1361,44 @@
       const T = {
         pt: {
           pageTitle: 'ENSO & Saúde | Monitor de Literatura Científica',
-          metaDescription: 'Literatura científica continuamente atualizada sobre El Niño, La Niña, ENSO e saúde humana.',
+          metaDescription: 'Literatura científica continuamente atualizada conectando ENSO, El Niño, La Niña e indicadores climáticos associados à saúde humana e a vias de exposição relevantes à saúde.',
           navAria: 'Navegação principal', languageAria: 'Idioma', themeAria: 'Alternar modo escuro', themeTitle: 'Alternar tema', dataSourcesAria: 'Fontes de dados', summaryStatsAria: 'Estatísticas resumidas', filtersAria: 'Filtros de publicações', yearChartAria: 'Publicações por ano',
           navPublications: 'Publicações', navTrends: 'Tendências', navMethodology: 'Metodologia',
           heroEyebrow: 'BASE BIBLIOGRÁFICA VIVA',
           heroTitle: 'Literatura científica sobre <span>ENSO</span> e saúde humana',
-          heroText: 'Um catálogo continuamente atualizado e de alta precisão de publicações científicas cujos títulos conectam explicitamente El Niño, La Niña ou ENSO à saúde humana e a desfechos de saúde.',
+          heroText: 'Um catálogo continuamente atualizado e de alta precisão de publicações científicas cujos títulos conectam explicitamente ENSO, El Niño, La Niña ou indicadores associados à saúde humana, a desfechos de saúde ou a vias de exposição relevantes à saúde.',
           initiativePrefix: 'Uma iniciativa da plataforma', developedBy: 'Elaborado por', explorePublications: 'Explorar publicações', howItWorks: 'Como funciona',
-          automaticallyUpdated: 'Atualização automática', sourceDescription: 'Descoberta baseada em títulos via OpenAlex e PubMed, com enriquecimento de metadados DOI pelo Crossref.',
+          automaticallyUpdated: 'Atualização automática', sourceDescription: 'Descoberta via OpenAlex, PubMed e Global Index Medicus, com suporte opcional ao Embase e enriquecimento de metadados DOI pelo Crossref. A inclusão final permanece title-first.',
           statPublications: 'Publicações', uniqueRecords: 'registros únicos', statOpenAccess: 'Acesso aberto', statLatestYear: 'Ano mais recente', currentDataset: 'na base atual', statHealthTopics: 'Temas de saúde', thematicGroups: 'grupos temáticos automáticos',
-          searchEyebrow: 'PESQUISE AS EVIDÊNCIAS', scientificPublications: 'Publicações científicas', publicationIntro: 'Somente publicações com um termo de ENSO e um termo predefinido de saúde no título são incluídas. A busca local considera título, autores, resumo, periódico, DOI e temas.', results: 'resultados',
+          searchEyebrow: 'PESQUISE AS EVIDÊNCIAS', scientificPublications: 'Publicações científicas', publicationIntro: 'Somente publicações com um termo ENSO/indicador e um termo predefinido de saúde, vetor, hospedeiro ou exposição no título são incluídas. A busca local do site considera título, autores, resumo, periódico, DOI e temas.', results: 'resultados',
           filters: 'Filtros', clearAll: 'Limpar tudo', search: 'Buscar', searchPlaceholder: 'ex.: dengue, Brazil, mortality…', publicationYear: 'Ano de publicação', healthTopic: 'Tema de saúde', allTopics: 'Todos os temas', ensoTerm: 'Termo ENSO', allEnsoCategories: 'Todas as categorias ENSO', sourceDatabase: 'Base de origem', allSources: 'Todas as fontes', openAccessOnly: 'Somente acesso aberto', sortBy: 'Ordenar por', newest: 'Mais recentes', mostCited: 'Mais citados', oldest: 'Mais antigos', titleAZ: 'Título A–Z',
           noPublications: 'Nenhuma publicação encontrada.', emptyHelp: 'Ajuste os filtros ou execute a atualização do GitHub Actions se esta for uma nova instalação.',
           landscapeEyebrow: 'PANORAMA DA PESQUISA', literatureEvolving: 'Como a literatura está evoluindo', trendIntro: 'Estes resumos são gerados a partir da base bibliográfica atual.', publicationsByYear: 'Publicações por ano', annualUnique: 'Número anual de publicações únicas.', publicationYearCaption: 'Ano de publicação', leadingTopics: 'Principais temas de saúde', topicOverlap: 'Os registros podem pertencer a mais de um grupo temático.', sourceCoverage: 'Cobertura por fonte', sourceCoverageDesc: 'Bases que contribuem para o catálogo integrado.',
           methodsEyebrow: 'MÉTODOS TRANSPARENTES', howBuilt: 'Como este monitor é construído', methodIntro: 'O monitor foi concebido como um catálogo reprodutível de descoberta, e não como uma afirmação de cobertura exaustiva. Nenhuma base bibliográfica isolada contém todas as publicações científicas.',
-          discover: 'Descobrir', discoverDesc: 'OpenAlex e PubMed são consultados apenas por títulos que contenham simultaneamente um termo ENSO e um termo predefinido de saúde humana.', screen: 'Triar', screenDesc: 'Uma triagem local rigorosa do título verifica independentemente os dois grupos conceituais antes que um registro possa entrar no catálogo.', merge: 'Integrar', mergeDesc: 'Os registros são deduplicados principalmente por DOI e PMID, com um procedimento complementar controlado baseado em título normalizado + ano.', enrich: 'Enriquecer e classificar', enrichDesc: 'O Crossref complementa metadados DOI ausentes, enquanto correspondências transparentes no título atribuem temas de saúde e rótulos ENSO.', publish: 'Publicar', publishDesc: 'Uma GitHub Action agendada reconstrói o catálogo JSON, que é lido diretamente pelo site estático.',
-          scopeLimitations: 'Escopo e limitações da busca', scopeP1: 'O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter pelo menos um termo configurado para El Niño, La Niña ou ENSO e pelo menos um termo predefinido referente à saúde humana, doença, mortalidade, morbidade, nutrição ou outro desfecho de saúde. A coocorrência apenas no resumo, nas palavras-chave ou no texto completo não é suficiente para inclusão.', scopeP2: 'Essa escolha favorece intencionalmente a precisão em detrimento da cobertura máxima. Trabalhos que estudem uma relação ENSO–saúde, mas não expressem ambos os conceitos no título, podem não ser recuperados. O catálogo apoia a descoberta e o monitoramento direcionado de evidências; ele não substitui um protocolo formal de revisão sistemática.',
+          strategyVersionLabel: 'Estratégia de busca', sourcesDetails: 'Bases bibliográficas e integração', sourcesIntro: 'O monitor integra fontes com coberturas complementares. A forma de descoberta varia conforme a base, mas todos os registros passam pelo mesmo critério local de inclusão orientado pelo título.', statusPrimary: 'principal', statusIntegrated: 'integrado', statusOptional: 'opcional', statusEnrichment: 'enriquecimento', openAlexSourceDesc: 'Descoberta automática em títulos com o vocabulário ENSO × saúde/exposição; também fornece metadados bibliográficos, citações e informação de acesso aberto quando disponível.', pubMedSourceDesc: 'Descoberta automática no campo de título, complementando a cobertura biomédica e permitindo deduplicação por PMID quando disponível.', gimSourceDesc: 'Descoberta sensível por texto livre e DeCS/descritores, seguida por triagem title-first local. A integração amplia a literatura regional, incluindo índices como AIM, IMEMR, IMSEAR, LILACS e WPRIM; sobreposições com MEDLINE/PubMed são deduplicadas.', embaseSourceDesc: 'Suporte programado no coletor. A consulta é ativada quando existem credenciais e autorização institucional válidas; se a base não estiver autorizada, a atualização continua com as demais fontes.', crossrefSourceDesc: 'Não é usado como fonte principal de descoberta. É consultado para complementar metadados associados a DOI quando necessário.', vocabDetails: 'Termos e estratégia de busca', vocabIntro: 'O vocabulário foi ampliado porque a inclusão final é title-first. Isso permite aumentar a sensibilidade da descoberta sem aceitar automaticamente resultados que não apresentem a relação ENSO–saúde no próprio título.', ensoExpressionCount: 'expressões ENSO/indicadores configuradas', healthGroupCount: 'grupos temáticos de saúde/exposição', healthTermCount: 'termos operacionais de saúde/exposição em inglês', ensoVocabTitle: 'Termos ENSO e indicadores aceitos no título', healthVocabTitle: 'Vocabulário de saúde, vetores, hospedeiros e exposições', acronymRuleDesc: 'As siglas SOI, ONI e MEI são tratadas com proteção adicional de capitalização/contexto para reduzir correspondências lexicais ambíguas.', gimVocabTitle: 'Global Index Medicus: vocabulário complementar', gimVocabIntro: 'Para descoberta no GIM, o coletor acrescenta expressões climáticas desambiguadas, o descritor DeCS de ENSO e aliases de saúde em português e espanhol. Esses termos ampliam somente a descoberta: a inclusão final continua exigindo a correspondência no título.', gimExposureTerms: 'Expressões climáticas/ENSO usadas na descoberta GIM',
+          discover: 'Descobrir', discoverDesc: 'OpenAlex e PubMed usam descoberta title-first com vocabulário ampliado. O Global Index Medicus usa descoberta sensível por texto/DeCS antes da triagem local; o Embase é consultado quando há autorização institucional.', screen: 'Triar', screenDesc: 'Todos os candidatos passam pelo mesmo filtro local: o título precisa conter ≥1 termo ENSO/indicador e ≥1 termo de saúde/exposição. Regras adicionais removem falsos positivos claros.', merge: 'Integrar', mergeDesc: 'Os registros são deduplicados principalmente por DOI e PMID, com um procedimento complementar controlado baseado em título normalizado + ano.', enrich: 'Enriquecer e classificar', enrichDesc: 'O Crossref complementa metadados DOI quando necessário, enquanto correspondências transparentes no título registram os termos ENSO, temas de saúde/exposição e o nível de relação identificado.', publish: 'Publicar', publishDesc: 'Uma GitHub Action agendada reconstrói o catálogo JSON, que é lido diretamente pelo site estático.',
+          scopeLimitations: 'Escopo e limitações da busca', scopeP1: 'O catálogo público utiliza um critério rigoroso de inclusão orientado pelo título. O título deve conter pelo menos um termo configurado de ENSO/indicador e pelo menos um termo predefinido de saúde ou de uma via de exposição relevante. O vocabulário inclui desfechos clínicos e epidemiológicos, doenças, mortalidade e morbidade, além de vetores/hospedeiros e exposições selecionadas, como Aedes, PM2.5, wildfire smoke e heat stress.', scopeP2: 'OpenAlex e PubMed fazem descoberta diretamente orientada pelo título. No Global Index Medicus, a descoberta é mais sensível e pode usar texto/descritores, mas nenhum registro entra no catálogo se o título não passar pelo mesmo filtro local. Abstracts, palavras-chave e descritores podem ajudar a encontrar candidatos, mas não substituem o requisito title-first de inclusão.', scopeP3: 'O screening também remove falsos positivos claros, como “el niño/la niña” usados no sentido de criança, mortalidade não humana, usos não epidemiológicos de “outbreak” e correções/erratas. Relações diretas e relações amplas por vetores, hospedeiros ou vias de exposição podem permanecer no catálogo quando a conexão está explícita no título.',
           footerTitle: 'Monitor ENSO & Saúde', footerDesc: 'Monitoramento bibliográfico aberto e reprodutível para pesquisas em clima e saúde.', backToTop: 'Voltar ao topo ↑'
         },
         en: {
           pageTitle: 'ENSO & Health Research Monitor',
-          metaDescription: 'Continuously updated scientific literature on El Niño, La Niña, ENSO and human health.',
+          metaDescription: 'Continuously updated scientific literature connecting ENSO, El Niño, La Niña and related climate indicators with human health, health outcomes and health-relevant exposure pathways.',
           navAria: 'Main navigation', languageAria: 'Language', themeAria: 'Toggle dark mode', themeTitle: 'Toggle theme', dataSourcesAria: 'Data sources', summaryStatsAria: 'Summary statistics', filtersAria: 'Publication filters', yearChartAria: 'Publications per year',
           navPublications: 'Publications', navTrends: 'Trends', navMethodology: 'Methodology',
           heroEyebrow: 'LIVING BIBLIOGRAPHIC DATABASE',
           heroTitle: 'Scientific literature on <span>ENSO</span> and human health',
-          heroText: 'A continuously updated, high-precision catalogue of scientific publications whose titles explicitly connect El Niño, La Niña or ENSO with human health and health outcomes.',
+          heroText: 'A continuously updated, high-precision catalogue of scientific publications whose titles explicitly connect ENSO, El Niño, La Niña or related indicators with human health, health outcomes or health-relevant exposure pathways.',
           initiativePrefix: 'An initiative of the', developedBy: 'Developed by', explorePublications: 'Explore publications', howItWorks: 'How it works',
-          automaticallyUpdated: 'Automatically updated', sourceDescription: 'Title-based discovery through OpenAlex and PubMed, with DOI metadata enrichment through Crossref.',
+          automaticallyUpdated: 'Automatically updated', sourceDescription: 'Discovery through OpenAlex, PubMed and Global Index Medicus, with optional Embase support and DOI metadata enrichment through Crossref. Final inclusion remains title-first.',
           statPublications: 'Publications', uniqueRecords: 'unique records', statOpenAccess: 'Open access', statLatestYear: 'Latest year', currentDataset: 'in the current dataset', statHealthTopics: 'Health topics', thematicGroups: 'automatic thematic groups',
-          searchEyebrow: 'SEARCH THE EVIDENCE', scientificPublications: 'Scientific publications', publicationIntro: 'Only publications with both an ENSO term and a predefined health term in the title are included. Search locally across title, authors, abstract, journal, DOI and topics.', results: 'results',
+          searchEyebrow: 'SEARCH THE EVIDENCE', scientificPublications: 'Scientific publications', publicationIntro: 'Only publications with an ENSO/indicator term and a predefined health, vector, host or exposure term in the title are included. The site search covers title, authors, abstract, journal, DOI and topics.', results: 'results',
           filters: 'Filters', clearAll: 'Clear all', search: 'Search', searchPlaceholder: 'e.g. dengue, Brazil, mortality…', publicationYear: 'Publication year', healthTopic: 'Health topic', allTopics: 'All topics', ensoTerm: 'ENSO term', allEnsoCategories: 'All ENSO categories', sourceDatabase: 'Source database', allSources: 'All sources', openAccessOnly: 'Open access only', sortBy: 'Sort by', newest: 'Newest', mostCited: 'Most cited', oldest: 'Oldest', titleAZ: 'Title A–Z',
           noPublications: 'No publications found.', emptyHelp: 'Adjust the filters or run the GitHub Actions update if this is a new installation.',
           landscapeEyebrow: 'RESEARCH LANDSCAPE', literatureEvolving: 'How the literature is evolving', trendIntro: 'These summaries are generated from the current bibliographic dataset.', publicationsByYear: 'Publications by year', annualUnique: 'Annual number of unique publications.', publicationYearCaption: 'Publication year', leadingTopics: 'Leading health topics', topicOverlap: 'Records can belong to more than one thematic group.', sourceCoverage: 'Source coverage', sourceCoverageDesc: 'Databases contributing to the merged catalogue.',
           methodsEyebrow: 'TRANSPARENT METHODS', howBuilt: 'How this monitor is built', methodIntro: 'The monitor is designed as a reproducible discovery catalogue rather than a claim of exhaustive coverage. No single bibliographic database contains every scientific publication.',
-          discover: 'Discover', discoverDesc: 'OpenAlex and PubMed are queried only for titles containing both an ENSO term and a predefined human-health term.', screen: 'Screen', screenDesc: 'A strict local title gate independently verifies both concept groups before a record can enter the catalogue.', merge: 'Merge', mergeDesc: 'Records are deduplicated primarily by DOI and PMID, with a guarded normalized-title + year fallback.', enrich: 'Enrich & classify', enrichDesc: 'Crossref fills missing DOI metadata, while transparent title matches assign health themes and ENSO labels.', publish: 'Publish', publishDesc: 'A scheduled GitHub Action rebuilds the JSON catalogue and the static website reads it directly.',
-          scopeLimitations: 'Search scope and limitations', scopeP1: 'The public catalogue uses a strict title-first inclusion criterion. A publication title must contain at least one configured term for El Niño, La Niña or ENSO and at least one predefined term referring to human health, disease, mortality, morbidity, nutrition or another health outcome. Abstract-only, keyword-only and full-text-only co-occurrence is not sufficient for inclusion.', scopeP2: 'This intentionally favors precision over maximum recall. Papers that study an ENSO–health relationship but do not express both concepts in the title can therefore be missed. The catalogue supports focused evidence discovery and surveillance; it does not replace a formal systematic-review protocol.',
+          strategyVersionLabel: 'Search strategy', sourcesDetails: 'Bibliographic sources and integration', sourcesIntro: 'The monitor integrates sources with complementary coverage. Discovery differs by database, but every record passes the same local title-first inclusion criterion.', statusPrimary: 'primary', statusIntegrated: 'integrated', statusOptional: 'optional', statusEnrichment: 'enrichment', openAlexSourceDesc: 'Automated title discovery using the ENSO × health/exposure vocabulary; it also provides bibliographic metadata, citation counts and open-access information when available.', pubMedSourceDesc: 'Automated title-field discovery that complements biomedical coverage and supports PMID-based deduplication when available.', gimSourceDesc: 'Sensitive free-text and DeCS/descriptor discovery followed by strict local title-first screening. The integration broadens regional literature coverage, including indexes such as AIM, IMEMR, IMSEAR, LILACS and WPRIM; MEDLINE/PubMed overlap is deduplicated.', embaseSourceDesc: 'Programmatic support is included in the collector. Searching is enabled when valid credentials and institutional entitlement are available; otherwise the update continues with the remaining sources.', crossrefSourceDesc: 'Not used as a primary discovery source. It is queried to complement DOI-associated metadata when needed.', vocabDetails: 'Search terms and strategy', vocabIntro: 'The vocabulary was broadened because final inclusion is title-first. This increases discovery sensitivity without automatically accepting records that do not express the ENSO–health relationship in the title itself.', ensoExpressionCount: 'configured ENSO/indicator expressions', healthGroupCount: 'health/exposure thematic groups', healthTermCount: 'operational English health/exposure terms', ensoVocabTitle: 'ENSO terms and indicators accepted in the title', healthVocabTitle: 'Health, vector, host and exposure vocabulary', acronymRuleDesc: 'The acronyms SOI, ONI and MEI receive additional capitalization/context safeguards to reduce ambiguous lexical matches.', gimVocabTitle: 'Global Index Medicus: complementary vocabulary', gimVocabIntro: 'For GIM discovery, the collector adds disambiguated climate expressions, the ENSO DeCS descriptor and Portuguese/Spanish health aliases. These terms broaden discovery only: final inclusion still requires a title match.', gimExposureTerms: 'Climate/ENSO expressions used for GIM discovery',
+          discover: 'Discover', discoverDesc: 'OpenAlex and PubMed use title-first discovery with the expanded vocabulary. Global Index Medicus uses sensitive text/DeCS discovery before local screening; Embase is queried when institutional authorization is available.', screen: 'Screen', screenDesc: 'All candidates pass the same local gate: the title must contain ≥1 ENSO/indicator term and ≥1 health/exposure term. Additional rules remove clear false positives.', merge: 'Merge', mergeDesc: 'Records are deduplicated primarily by DOI and PMID, with a guarded normalized-title + year fallback.', enrich: 'Enrich & classify', enrichDesc: 'Crossref complements DOI metadata when needed, while transparent title matches record ENSO terms, health/exposure themes and the identified relationship tier.', publish: 'Publish', publishDesc: 'A scheduled GitHub Action rebuilds the JSON catalogue and the static website reads it directly.',
+          scopeLimitations: 'Search scope and limitations', scopeP1: 'The public catalogue uses a strict title-first inclusion criterion. A title must contain at least one configured ENSO/indicator term and at least one predefined health or health-relevant exposure term. The vocabulary includes clinical and epidemiological outcomes, diseases, mortality and morbidity, plus selected vectors/hosts and exposures such as Aedes, PM2.5, wildfire smoke and heat stress.', scopeP2: 'OpenAlex and PubMed use direct title-oriented discovery. Global Index Medicus uses more sensitive text/descriptor discovery, but no record enters the catalogue unless its title passes the same local gate. Abstracts, keywords and descriptors can help discover candidates but do not replace the title-first inclusion requirement.', scopeP3: 'Screening also removes clear false positives, including “el niño/la niña” meaning a child, non-human mortality, non-epidemiological uses of “outbreak”, and corrections/errata. Direct relationships and broader vector, host or exposure pathways can remain when the connection is explicit in the title.',
           footerTitle: 'ENSO & Health Research Monitor', footerDesc: 'Open, reproducible bibliographic monitoring for climate and health research.', backToTop: 'Back to top ↑'
         }
       };
